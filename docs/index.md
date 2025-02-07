@@ -8,9 +8,9 @@
 | __Publication date__     | 2025-01-01 |
 | __Generation date__      | {{ page.date }} |
 
-This publication is made available by EXAMPLE. If you find any incorrect or incomplete content, please raise a ticket in this repository. Further information can be acquired by contacting [EXAMPLE INC](https://www.example.inc/contact.html). 
+This publication is made available by EXAMPLE. If you find any incorrect or incomplete content, please raise [a ticket](../issues) in this repository. Further information can be acquired by contacting [EXAMPLE INC](https://www.example.inc/contact.html). 
 
-## Annotations
+## Document annotations
 
 Please find the following information here:
 
@@ -25,11 +25,17 @@ Please find the following information here:
 * Do not remove this line (it will not be displayed)
 {:toc}
 
+Or...
+
+{% include toc.html html=content class="inline_toc" h_min=2 h_max=3 %}
+
+<!--
 ## Tags
 
 {% for tag in page.tags %}
  - {{tag}}
 {% endfor %}
+-->
 
 ## Introduction
 
@@ -37,7 +43,12 @@ Please find the following information here:
 
 ### ID S01
 
-__Title__
+|Title| __Title__ |
+|:----|:----------|
+|Strategy|The Strategy|
+
+<details>
+<summary>Open section for explanation, rationale and exception conditions</summary>
 
 #### Strategy
 This is the Strategy
@@ -47,6 +58,8 @@ This is the Explanation
 This is the Rationale
 #### Exceptions
 This is the Exception
+
+</details>
 
 ## Design rules
 
@@ -64,6 +77,7 @@ Example:
   "type" : "hello",
   "title" : "Greetings from me",
   "status" : 404
+}
 ```
 More details can be found in [Sample](attachments/sample.md).
 

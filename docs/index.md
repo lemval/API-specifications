@@ -43,12 +43,13 @@ Or...
 
 ### ID S01
 
-|Title| __Title__ |
+|Title| __S01 - Title__ |
 |:----|:----------|
 |Strategy|The Strategy|
 
 <details>
-<summary>Open section for explanation, rationale and exception conditions</summary>
+
+<summary> Open section for explanation, rationale and exception conditions </summary>
 
 #### Strategy
 This is the Strategy

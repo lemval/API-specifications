@@ -1,7 +1,9 @@
 markdown: kramdown
 kramdown:
   toc_levels      : [2, 3]
-#  parse_block_html: true
+  parse_block_html: true
+
+# Block parsing is needed for closeable sections
 
 theme: jekyll-theme-minimal
 title: Example title

@@ -49,7 +49,9 @@ Or...
 
 <details>
 
-<summary> Open section for explanation, rationale and exception conditions </summary>
+<summary>
+Open section for explanation, rationale and exception conditions 
+</summary>
 
 #### Strategy
 This is the Strategy

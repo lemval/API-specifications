@@ -1,4 +1,4 @@
-# Change management
+# Change management (API Design rules)
 
 | Version | Status   | Changes    |
 | :------ | :------- | :--------- |

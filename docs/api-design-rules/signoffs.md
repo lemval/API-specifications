@@ -1,4 +1,4 @@
-# Sign off
+# Sign off (API Design rules)
 
 The sign offs are sorted by most recent first.
 

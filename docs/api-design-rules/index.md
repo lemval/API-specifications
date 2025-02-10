@@ -6,7 +6,6 @@
 | __Version__              | 1.1        |
 | __Status__               | Draft      |
 | __Publication date__     | 2025-01-01 |
-| __Generation date__      | {{ date }} |
 
 This publication is made available by EXAMPLE. If you find any incorrect or incomplete content, please raise a ticket in this repository. Further information can be acquired by contacting [EXAMPLE INC](https://www.example.inc/contact.html). 
 

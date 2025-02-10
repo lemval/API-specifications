@@ -6,9 +6,9 @@
 | __Version__              | 1.1        |
 | __Status__               | Draft      |
 | __Publication date__     | 2025-01-01 |
-| __Generation date__      | {{ page.date }} |
+| __Generation date__      | {{ date }} |
 
-This publication is made available by EXAMPLE. If you find any incorrect or incomplete content, please raise [a ticket](/issues) in this repository. Further information can be acquired by contacting [EXAMPLE INC](https://www.example.inc/contact.html). 
+This publication is made available by EXAMPLE. If you find any incorrect or incomplete content, please raise a ticket in this repository. Further information can be acquired by contacting [EXAMPLE INC](https://www.example.inc/contact.html). 
 
 ## Document annotations
 
@@ -16,8 +16,8 @@ Please find the following information here:
 
 [Changes](changes.md) - for all changes in this publication\
 [Signoffs](signoffs.md) - for notification and signoffs for publication\
-[References](references.md) - for references to other publications\
-[Dictionary](dictionary.md) - explanatory guide for terms and abbreviations
+[References](../references.md) - for references to other publications\
+[Dictionary](../dictionary.md) - explanatory guide for terms and abbreviations
 
 ## Table of contents
 
@@ -35,7 +35,6 @@ Please find the following information here:
 |Strategy|The Strategy|
 
 <details>
-
 <summary> Open section for explanation, rationale and exception conditions 
 </summary>
 
@@ -54,7 +53,13 @@ This is the Exception
 
 ### ID 01
 
-__Title__
+|Title| __01 - Title__ |
+|:----|:----------|
+|Strategy|The Strategy|
+
+<details>
+<summary> Open section for explanation, rationale and exception conditions 
+</summary>
 
 #### Strategy
 This is the Strategy
@@ -68,9 +73,12 @@ Example:
   "status" : 404
 }
 ```
-More details can be found in [Sample](attachments/sample.md).
+More details can be found in [Sample](../attachments/sample.md).
 
 #### Rationale
 This is the Rationale
 #### Exceptions
 This is the Exception
+
+</details>
+

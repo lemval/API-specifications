@@ -2,3 +2,14 @@
 ---
 
 @import "{{ site.theme }}";
+
+summary {
+	background: aliceblue;
+    list-style-position: outside;
+	font-style: italic;
+}
+
+h3 {
+    background-color: cornsilk;
+    padding: 0.5em;
+}

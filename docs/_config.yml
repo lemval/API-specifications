@@ -6,6 +6,8 @@ kramdown:
 # Block parsing is needed for closeable sections
 
 theme: jekyll-theme-minimal
+show_downloads: true
+
 title: Example title
 description: Description of the example site
-show_downloads: true
+

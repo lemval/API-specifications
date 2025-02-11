@@ -3,8 +3,8 @@
 
 @import "{{ site.theme }}";
 
-wrapper {
-    width: none;
+.wrapper {
+    width: unset;
     margin: 50px;
 }
 

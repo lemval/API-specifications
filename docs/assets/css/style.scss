@@ -3,6 +3,11 @@
 
 @import "{{ site.theme }}";
 
+wrapper {
+    width: none;
+    margin: 50px;
+}
+
 summary {
 	background: aliceblue;
     list-style-position: outside;

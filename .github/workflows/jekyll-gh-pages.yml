@@ -31,7 +31,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Concatenate API Design Rules
-        uses: nerdoza/action-md-concat@v1
+        uses: lemval/action-md-concat@373de7cd31ab1d165f4b5fadccf6b07722b608d1
         with:
           srcDir: source/api-design-rules
           destFile: docs/api-design-rules/index.md

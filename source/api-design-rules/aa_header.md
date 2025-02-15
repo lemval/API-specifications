@@ -3,7 +3,7 @@
 | <!-- -->             | <!-- -->   |
 | :------------------- | :--------- |
 | __Code__                 | BSCMF0028    |
-| __Version__              | 5.1        |
+| __Version__              | 5.1-web        |
 | __Status__               | Concept      |
 | __Publication date__     | 2025-02-15 |
 
@@ -39,4 +39,8 @@ The starting point for the API design guidelines is the API Strategy for the Dut
 [^2]: Referred documents can be found in the global [document reference](../references.md).
 
 ## Design rules
+
+The STD rules are the standards set by other bodies that guide the APIs designed and developed by the energy sector.
+
+The remainder of the document contains the guidelines that have been drawn up based on best practices and lessons learned and are guiding for the APIs that are designed and developed by the energy sector. These guidelines are supplementary and/or prevailing to the API strategy for the Dutch government (ASNO).
 

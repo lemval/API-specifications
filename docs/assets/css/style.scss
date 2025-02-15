@@ -20,10 +20,17 @@ h3 {
     padding: 0.5em;
 }
 
+th, td:nth-of-type(1) {
+	width: 1px;
+	background-color: yellow;
+}
+
+th, td:nth-child(1) {
+	width: 1px;
+	background-color: orange;
+}
+
 th, td {
     padding:unset;
 }
 
-th, td > :first-child {
-	width: 1px;
-}

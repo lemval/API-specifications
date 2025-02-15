@@ -1,5 +1,5 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: GitHub Pages (custom)
 
 on:
   # Runs on pushes targeting the default branch
@@ -33,7 +33,7 @@ jobs:
       - name: Concatenate API Design Rules
         uses: nerdoza/action-md-concat@v1
         with:
-          srcDir: sources/api-design-rules
+          srcDir: source/api-design-rules
           destFile: docs/api-design-rules/index.md
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1

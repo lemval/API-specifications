@@ -2,3 +2,19 @@
 ---
 
 @import "{{ site.theme }}";
+
+.wrapper {
+    width: unset;
+    margin: 50px;
+}
+
+summary {
+	background: aliceblue;
+    list-style-position: outside;
+	font-style: italic;
+}
+
+h3 {
+    background-color: cornsilk;
+    padding: 0.5em;
+}

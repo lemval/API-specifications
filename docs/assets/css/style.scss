@@ -8,6 +8,11 @@
     margin: 50px;
 }
 
+.header-table {
+    padding: 5px 5px;
+    width: unset;
+}
+
 summary {
 	background: silver;
     list-style-position: outside;
@@ -21,6 +26,6 @@ h3 {
 }
 
 th, td {
-    padding:unset;
+    padding: 5px 5px;
 }
 

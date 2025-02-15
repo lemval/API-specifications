@@ -3,7 +3,7 @@
 | | Description |
 |-|-------------|
 |API	|Application Programming Interface|
-|ASNO	|API strategie voor de Nederlandse overheid|
+|ASNO	|API strategy for the Dutch government|
 |JSON	|JavaScript Object Notation|
 |ODATA	|Open Data Protocol |
 |OAS	|Open API Specification|

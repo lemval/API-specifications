@@ -8,8 +8,9 @@
 | 2-3 | API Designrules Extensions (Nederlandse API Strategie IIb)| 13-10-2021 | Handreiking     | Geonovum e.a. |
 | 3   | TC021 Vastlegging datum/tijd conventies                   | 28-09-2011 | 1.0             | NEDU TC       |
 | 4   | TC028 Veldlengtes in berichten                            | 28-10-2015 | 1.0             | NEDU TC       |
-| 5   | NEDU API strategie                                        | 16-12-2020 | 1.0             | NEDU API werkgroep|
-| 6   | MFFBAS API URI richtlijnen                                | 01-05-2023 | 1.0             | MFFBAS API werkgroep|
-| 7   | W3C DTF Note ISO 8601                                     | 15-09-1997 |                 | W3C           |
+| 7   | [W3C DTF Note ISO 8601](https://www.w3.org/TR/NOTE-datetime) | 15-09-1997 |                 | W3C           |
 | 8   | [API Strategie Digitaal Stelsel Omgevingswet](https://aandeslagmetdeomgevingswet.nl/digitaal-stelsel/aansluiten/standaarden/api-en-uri-strategie/)             | 26-03-2020 | 2.0 Vastgesteld | A.J. Sloos e.a.|
 | 9   | Problem Details for HTTP APIs – RFC9457	15-12-2023        | July 2023  | | Mark Nottingham, Erik Wilde, Sanjay Dalal|
+
+
+The API Strategy of the Dutch Government, as mentioned under [2], can be found on the [**Kennisplatform API's**](https://developer.overheid.nl/communities/kennisplatform-apis).

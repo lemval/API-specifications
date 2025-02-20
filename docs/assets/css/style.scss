@@ -8,13 +8,24 @@
     margin: 50px;
 }
 
+.header-table {
+    padding: 5px 5px;
+    width: unset;
+}
+
 summary {
-	background: aliceblue;
+	background: silver;
     list-style-position: outside;
 	font-style: italic;
+	font-size: smaller;
 }
 
 h3 {
-    background-color: cornsilk;
+    background-color: darkgray;
     padding: 0.5em;
 }
+
+th, td {
+    padding: 5px 5px;
+}
+

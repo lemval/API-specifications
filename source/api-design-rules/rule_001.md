@@ -1,17 +1,14 @@
 ### ID 01
 
-|Title| __01 - Title__ |
-|:----|:----------|
-|Strategy|The Strategy|
+| Title    | __01 - Title__ |
+| :----    | :---------- |
+| Strategy | Strategy value |
 
 <details><summary>
 
 Open section for explanation, rationale and exception conditions 
 
 </summary>
-
-#### Strategy
-This is the Strategy
 
 #### Explanation
 This is the Explanation
@@ -26,10 +23,9 @@ Example:
 More details can be found in [Sample](../attachments/sample.md).
 
 #### Rationale
-This is the Rationale
 
 #### Exceptions
-This is the Exception
 
 </details>
+
 

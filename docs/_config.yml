@@ -14,6 +14,6 @@ plugins:
 
 show_downloads: true
 
-title: Example title
-description: Description of the example site
+title: MFFBAS API Specifications
+description: Standards and guidelines for exchange of energy data.
 

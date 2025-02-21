@@ -6,6 +6,7 @@ On these pages you find the different publications on API strategy within the en
 
 ## Publications
 
+**[URI Conventions](uri-conventions/)** - Strategy on naming resources
 **[API Design Rules](api-design-rules/)** - Design Rules for creating APIs
 
 ## Suggestions

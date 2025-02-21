@@ -35,6 +35,11 @@ jobs:
         with:
           srcDir: source/api-design-rules
           destFile: docs/api-design-rules/index.md
+      - name: Concatenate URI Conventions
+        uses: nerdoza/action-md-concat@v1
+        with:
+          srcDir: source/uri-conventions
+          destFile: docs/uri-conventions/index.md
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:

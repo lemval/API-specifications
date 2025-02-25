@@ -10,7 +10,7 @@
 
 This document is a publication of MFF BAS. In the pursuit of completeness and correctness of data, we kindly request you to submit comments, additions and improvements regarding this document to EDSN by [raising a ticket]({{ site.github.issues_url }}) in this repostory. You can contact [EDSN](https://www.edsn.nl/contact/) in the manner below, also for more information about this document.
 
-## Document annotations
+### Document annotations
 
 Please find the following information here:
 
@@ -19,7 +19,7 @@ Please find the following information here:
 [References](../references.md) - for references to other publications\
 [Dictionary](../dictionary.md) - explanatory guide for terms and abbreviations
 
-## Table of contents
+### Table of contents
 
 * Do not remove this line (it will not be displayed)
 {:toc}
@@ -57,7 +57,7 @@ is limited but leading to use within the CMF. In practice, this applies to all R
 
 [^1]: Referred documents can be found in the global [document reference](../references.md).
 
-## Coherence of the concepts URI, URN, URL and resource
+### Coherence of the concepts URI, URN, URL and resource
 
 To understand this topic properly, a bit of explanation is needed about the definition of URIs, URNs and URLs. URIs provide 
 a mechanism to refer to resources regardless of where they are located on the Internet. URIs are human-readable because 

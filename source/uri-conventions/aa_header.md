@@ -3,7 +3,7 @@
 | <!-- -->                 | <!-- -->   |
 | :-------------------     | :--------- |
 | __Code__                 |            |
-| __Version__              | 2.1        |
+| __Version__              | 2.0-web    |
 | __Status__               | Concept    |
 | __Publication date__     | 2025-02-15 |
 {: .header-table }

@@ -57,7 +57,7 @@ is limited but leading to use within the CMF. In practice, this applies to all R
 
 [^1]: Referred documents can be found in the global [document reference](../references.md).
 
-### Coherence of the concepts URI, URN, URL and resource
+## Coherence of the concepts URI, URN, URL and resource
 
 To understand this topic properly, a bit of explanation is needed about the definition of URIs, URNs and URLs. URIs provide 
 a mechanism to refer to resources regardless of where they are located on the Internet. URIs are human-readable because 

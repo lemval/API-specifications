@@ -42,8 +42,9 @@ Linked data, etc. There are various options to indicate this distinction (in thi
 ```https://<Authority>/<other Path characteristics>/api/<other Path characteristics>```
 
 The advantages and disadvantages of both options:
+
 | Option | Advantages | Disadvantages |
-| --- | --- | --- |
+| ---    | ---        | ---           |
 | Exposed as part of the \<Authority\> (1)|The method of disclosing services is immediately clear from the domain name.<br/> Makes it possible to disclose one resource in different ways.<br/> Routing through the gateway to the backend is easier.|Agreement must be reached on disclosing a new type of service within the domain.|
 | Exposed as part of the \<Path\> (2) | Domain name always remains the same.| The method of disclosing services is not immediately clear from the (sub) domain name.|
 
@@ -126,6 +127,7 @@ There are several options on which to base the choice for a subdomain:
 5. On registry
 
 The advantages and disadvantages of the different options:
+
 | Option | Advantages | Disadvantages |
 | --- | --- | --- |
 | Busines function|Very stable for a long time. The chance that a business function in the energy sector changes is small and if it is discontinued, the service is probably no longer needed.|Significantly impactful, especially for consumers of energy services: all URIs will change (mitigation: silent fade out, coexistance)
@@ -144,6 +146,7 @@ Motivation:
 This option is good long-term stability, with low impact and costs. Option 1 is even more long-term stability, but this means, among other things, drawing up an exhaustive list of business functions and applying them to URIs and existing web services.
 
 Overview of central hubs and portals:
+
 | Hub subject | Hub subject (Dutch) | Abbreviation|Target system |
 | --- | --- | --- | --- |
 |Wholesale electricity |Groothandel elektriciteit |wse |routes to CPS (Tennet, currently MMC) |
@@ -167,7 +170,7 @@ The following table shows the substantiation for the choice between the differen
 |Domain name of the API provider|Recognizable to outsiders what the source/provider is (which business unit) and who has the responsibility|APIs that offer the same functionality can be offered by multiple parties over time.<br/>Organization names can change by merging or splitting companies.|
 |An organization-specific national domain name for all APIs.|One central point for API access.|National organization names can change by merging or splitting the organizations.<br/>Less recognizable who the provider is.|
 |National generic domain name to be chosen that is separate from an organization|When merging or splitting network operators or other sector participants, the URI will remain the same|Agreements and coordination are needed on how participating parties will publish information.|
-|International domain name such as: https://w3id.org/netbeheer/def/EStationcomplex/|When merging or splitting network operators, the URI will remain the same|Dependence on the provider (less control than a private domain name).|
+|International domain name such as: `https://w3id.org/netbeheer/def/EStationcomplex/` | When merging or splitting network operators, the URI will remain the same|Dependence on the provider (less control than a private domain name).|
 
 We choose option (3) here:
 ```
@@ -191,3 +194,4 @@ https://api.<environment>.<routing>.energysector.nl
 Examples for \<Authority\>:
 - api.acc.cmf.energysector.nl
 - api.wse.energysector.nl (not: api.**prd**.wse.energysector.nl)
+

@@ -13,6 +13,11 @@
     width: unset;
 }
 
+.boxed code {
+	border: 2px solid green;
+    padding: 8px;
+}
+
 summary {
 	background: silver;
     list-style-position: outside;
@@ -29,4 +34,3 @@ th, td {
     padding: 5px 5px;
     vertical-align: top;
 }
-

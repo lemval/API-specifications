@@ -1,11 +1,9 @@
 ### Field 'specversion'
 
-ID 01
-
-| ID | 01 |
-| :----    | :---------- |
-| Name | specversion |
-| Type | string |
+| ID     | 01 |
+| :----  | :---------- |
+| Name   | specversion |
+| Type   | string |
 | Detail | metadata specification version |
 
 <details><summary>

@@ -21,6 +21,8 @@ The site itself is generated based on the 'docs' folder for static files and the
 
 For updating the document, see for an extensive description the [Getting start pages](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github) or dive directly into the [flavoured specification](https://github.github.com/gfm/).
 
+Diagrams can be made using [Mermaid](https://mermaid.js.org/syntax/flowchart.html). Use a code block (three backticks) using the 'mermaid' formatter.
+
 ## Releasing
 
 Releases are done by merging the develop branch into the main branch, tagging it accordingly and creating a release.

@@ -1,7 +1,7 @@
 
 ### ID 04
 
-#### The URIs are written in lower case, except for the <Query> part.
+#### The URIs are written in lower case, except for the \<Query\> part.
 
 <details><summary>
 
@@ -20,6 +20,6 @@ URIs consist of a domain part and a resource part. The internet standard RFC3986
 
 #### Examples
 
-https://api.cmf.energysector.nl/energy-market/market-participant/marketagreement/contract-management/v1/market-agreements/879999999999999999
+`https://api.cmf.energysector.nl/energy-market/market-participant/marketagreement/contract-management/v1/market-agreements/879999999999999999`
 
 </details>

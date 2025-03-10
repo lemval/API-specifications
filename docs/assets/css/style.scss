@@ -15,39 +15,50 @@
 
 pre {
     padding: 10px;
-    background: #98a2c0;
     color: #f8f8f2;
     margin: 0 0 15px 0;
 }
 
 .boxed pre {
     padding: 10px;
-    background: #3A3C42;
+    background: #98a2c0;
 }
 
 .boxed code {
-    border: 2px solid #787878;	
+    border: 2px solid #787878;
     padding: 9px 15px 9px 15px;
-	margin: -8px;
+    margin: -8px;
 }
 
 p:has(+div.boxed) {
-	margin: auto;
+    margin: auto;
+}
+
+section {
+    font-size: 13px;
 }
 
 summary {
-	background: silver;
+    background: silver;
     list-style-position: outside;
-	font-style: italic;
-	font-size: smaller;
+    font-style: italic;
+    font-size: smaller;
 }
 
 h3 {
     background-color: lightgrey;
     padding: 0.3em;
+ 
+
+h2, h3, h4, h5, h6 {
+    margin: 0 0 8px 0;
 }
 
 th, td {
     padding: 5px 5px;
     vertical-align: top;
+}
+
+p, ul, ol, table, pre, dl {
+    margin: 0 0 12px;
 }

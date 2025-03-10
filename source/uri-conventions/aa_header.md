@@ -46,7 +46,7 @@ URIs can be used for several things. The government distinguishes the following 
 4. Linked Data.
 
 Since this URI strategy focuses on API use, we limit ourselves (for now) to REST API URIs. However, the application of the
-convention discussed here already takes into account the use for other methods (see [Method of unlocking (technique)]()).
+convention discussed here already takes into account the use for other methods (see [Method of unlocking (technique)](#exposure-method-technique)).
 
 Why is there a need for URI guidelines? URIs are inextricably linked to APIs. Every piece of information and/or functionality 
 that is offered via an API needs an identification (URI), which makes a REST API discoverable and accessible. URI guidelines 

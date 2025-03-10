@@ -13,9 +13,26 @@
     width: unset;
 }
 
+pre {
+    padding: 10px;
+    background: #98a2c0;
+    color: #f8f8f2;
+    margin: 0 0 15px 0;
+}
+
+.boxed pre {
+    padding: 10px;
+    background: #3A3C42;
+}
+
 .boxed code {
-	border: 2px solid green;
-    padding: 8px;
+    border: 2px solid #787878;	
+    padding: 9px 15px 9px 15px;
+	margin: -8px;
+}
+
+p:has(+div.boxed) {
+	margin: auto;
 }
 
 summary {
@@ -26,8 +43,8 @@ summary {
 }
 
 h3 {
-    background-color: darkgray;
-    padding: 0.5em;
+    background-color: lightgrey;
+    padding: 0.3em;
 }
 
 th, td {

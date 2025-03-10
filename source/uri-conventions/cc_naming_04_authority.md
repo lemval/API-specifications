@@ -170,7 +170,7 @@ The following table shows the substantiation for the choice between the differen
 |Domain name of the API provider|Recognizable to outsiders what the source/provider is (which business unit) and who has the responsibility|APIs that offer the same functionality can be offered by multiple parties over time.<br/>Organization names can change by merging or splitting companies.|
 |An organization-specific national domain name for all APIs.|One central point for API access.|National organization names can change by merging or splitting the organizations.<br/>Less recognizable who the provider is.|
 |National generic domain name to be chosen that is separate from an organization|When merging or splitting network operators or other sector participants, the URI will remain the same|Agreements and coordination are needed on how participating parties will publish information.|
-|International domain name such as: `https://w3id.org/netbeheer/def/EStationcomplex/` | When merging or splitting network operators, the URI will remain the same|Dependence on the provider (less control than a private domain name).|
+|International domain name such as: `https://w3id.org/netbeheer/` | When merging or splitting network operators, the URI will remain the same|Dependence on the provider (less control than a private domain name).|
 
 We choose option (3) here:
 ```

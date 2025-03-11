@@ -3,22 +3,28 @@
 
 @import "{{ site.theme }}";
 
+/* Below are customed styles. Do not remove anything above this line */
+
+/** Make the site nearly as wide as the page **/
 .wrapper {
     width: unset;
     margin: 50px;
 }
 
+/** Customized class for document details: Less padding, no full width. **/
 .header-table {
     padding: 5px 5px;
     width: unset;
 }
 
+/** Make code blocks with less margin/padding and not as black as the theme sets. **/
 pre {
     padding: 10px;
     color: #f8f8f2;
     margin: 0 0 15px 0;
 }
 
+/** Customized class for decisions. **/
 .boxed pre {
     padding: 10px;
     background: #98a2c0;
@@ -30,14 +36,17 @@ pre {
     margin: -8px;
 }
 
+/** Make sure the text before decisions is kept near the code block. **/
 p:has(+div.boxed) {
     margin: auto;
 }
 
+/** Size down the default font size. **/
 section {
-    font-size: 13px;
+    font-size: 14px;
 }
 
+/** **/
 summary {
     background: silver;
     list-style-position: outside;
@@ -45,6 +54,7 @@ summary {
     font-size: smaller;
 }
 
+/** Restyle default elements to be less spacey. **/
 h3 {
     background-color: lightgrey;
     padding: 0.3em;

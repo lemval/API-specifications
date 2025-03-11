@@ -3,7 +3,7 @@
 |Reference|Name|Date|Version|Author|
 |---------|----|----|-------|------|
 | 1   | NEDU EDSN Ontwerpkeuzes                                   | 15-04-2021 | 3.9             | NEDU/EDSN     |
-| 2-1 | API Strategie Algemeen (Nederlandse API Strategie I)      | 20-12-2021 | Handreiking     | Geonovum e.a. |
+| 2-1 | [API Strategie Algemeen (Nederlandse API Strategie I)      | 20-12-2021 | Handreiking](https://docs.geostandaarden.nl/api/def-hr-API-Strategie-20220309/) | Geonovum e.a. |
 | 2-2 | REST-API Design Rules (Nederlandse API Strategie IIa)     | 09-07-2020 | 1.0 Vastgesteld | Geonovum e.a. |
 | 2-3 | API Designrules Extensions (Nederlandse API Strategie IIb)| 13-10-2021 | Handreiking     | Geonovum e.a. |
 | 3   | TC021 Vastlegging datum/tijd conventies                   | 28-09-2011 | 1.0             | NEDU TC       |

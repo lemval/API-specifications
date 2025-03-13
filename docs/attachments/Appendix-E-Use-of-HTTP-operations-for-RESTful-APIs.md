@@ -217,3 +217,102 @@ For DELETE operations on a collection, it may be useful to include information i
 
 ------
 
+## PATCH Operation
+
+### Explanation
+
+A PATCH operation is always performed on a unique resource (i.e., a URL that determines the unique identity of the resource). With a PATCH operation, it is possible to selectively update parts of a resource. Within the HTTP standard, PATCH is a special case because it is not part of the core HTTP specification but is instead described in several separate RFCs (thus, it should be considered an extension to HTTP). There are also multiple forms of PATCH, each with its own challenges. [This web page](https://williamdurand.fr/2014/02/14/please-dont-patch-like-that/) provides a useful overview and also refers to an alternative implementation ([JSON Merge Patch](https://datatracker.ietf.org/doc/html/rfc7396)).
+
+The original implementation of PATCH ([JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902)) uses a set of “update rules” that allow the requester to specify exactly what should be done (delete, add, replace, copy). This is a relatively complex mechanism but has the advantage of explicitly defining the intended changes. Example:
+
+![PatchExample](./PatchExample.png)
+
+This model is fully described in [RFC 6902](https://datatracker.ietf.org/doc/html/rfc6902) and is allowed as an implementation, provided it is explicitly mentioned in the service design documentation, as it requires considerable implementation effort from both the client and the server. The advantage, however, is that it makes the intended changes very explicit.
+
+The content type for this PATCH variant **should** be `application/json-patch+json`.
+
+As a simpler alternative, [JSON Merge Patch](https://datatracker.ietf.org/doc/html/rfc7396) can be used. The content type for this PATCH variant **should** be `application/merge-patch+json`. The advantage of this second variant is that it is easier to implement, as only the modified content needs to be transmitted. The disadvantages include the lack of explicit expressiveness and poor support for arrays (to modify an array, a complete new version of the array must be provided). Because the request payload in this case must support many variations (all permutations possible within the data model), an explicit schema is generally not used for the request, but rather a JSON “any” schema. The server dynamically validates the received data and applies the identified structures to the existing resource state where possible.
+
+Additionally, along with the resource identification, the client **may** also provide an **If-Match** header containing the ETag key known to the client for the given resource. This allows the server to validate the state of the resource before executing the update operation (see guideline XXX for details).
+
+The operation **may** result in the following response codes:
+
+- **202 – Accepted**: The request has been received and successfully validated but has not yet been executed. This can happen in cases of asynchronous processing. If the requester wants to ensure that the changes have been applied, a later GET request must be performed to check the state.
+- **204 – No Content**: The update was successful, and no response is returned since it can be retrieved via a GET operation (see justification under GET).
+- **404 – Not Found**: The specified ID does not correspond to a valid resource.
+- **409 – Conflict**: The resource exists, but its current state makes it impossible to update, e.g., because it is locked or the ETag key differs (conflicting update).
+
+A PATCH operation **should not** contain a response body (except for error messages that are part of failure responses)!
+
+### Justification
+
+The PATCH operation is intended for selectively updating a resource. In the context of responsibility separation, this is also its sole function. Returning the latest known state, for example, does **not** fall under the responsibility of this operation. For this reason, PATCH does not return a response body, other than success or error messages.
+
+### Deviations
+
+None.
+
+------
+
+## HEAD Operation
+
+### Explanation
+
+A HEAD operation is always performed on a unique resource (i.e., a URL that determines the unique identity of the resource). HEAD allows retrieving **only** the HTTP headers that the server would have sent if the corresponding GET request had been executed, but **without** the complete payload. The HEAD operation is only useful if the server returns meaningful header information. The most relevant headers include:
+
+- **Content-Type**: The content type(s) that the endpoint will return (e.g., application/json).
+- **Content-Length**: The length (in bytes) of the corresponding GET response payload.
+- **ETag**: The ETag key of the corresponding GET response payload.
+
+The operation **may** result in the following response codes:
+
+- **204 – No Content**: The standard success response for HEAD, as no response body is returned by definition.
+- **404 – Not Found**: The specified ID does not correspond to a valid resource.
+- **501 – Not Implemented**: The server does not support the HEAD operation.
+
+A HEAD operation **should never** contain a response body (except for error messages in failure responses)!
+
+### Justification
+
+The HEAD operation can be useful for retrieving metadata (such as ETag and other headers) without receiving the full payload. Possible use cases include checking whether a resource exists or determining if a resource has been modified (in which case the server should return the ETag header).
+
+### Deviations
+
+None.
+
+------
+
+## OPTIONS Operation
+
+### Explanation
+
+The purpose of the OPTIONS operation is to request metadata for a given endpoint (a resource). The response consists of a set of HTTP header parameters that indicate, among other things, which operations are allowed for that endpoint, whether and for how long responses may be cached, which security requirements apply, which content types are accepted, etc. Here is an example of an OPTIONS response:
+
+![OptionsExample](./OptionsExample.png)
+
+The server **may** send the following header parameters in an OPTIONS response:
+
+- **Content-Type**: The content type(s) that the endpoint can return (e.g., application/json).
+- **Allow**: The operations supported by the endpoint (e.g., PUT, POST, GET).
+- **Cache-Control**: Instructions for response caching.
+- **Vary**: Determines which request components influence the response; this is generally used to ensure correct response caching.
+- **Connection**: Indicates whether the network connection remains open after a request/response transaction (keep-alive) or if it must be re-established for each transaction (close).
+- **Keep-Alive**: Specifies parameters for maintaining a network connection when Connection: keep-alive is used.
+
+The server **may** also send other header parameters if they are considered relevant in the given context.
+
+The operation **may** result in the following response codes:
+
+- **204 – No Content**: The standard success response for OPTIONS, as a response body is typically not returned.
+- **404 – Not Found**: If the URL contains a resource ID and the specified ID does not correspond to a valid resource.
+- **501 – Not Implemented**: The server does not support the OPTIONS operation.
+
+An OPTIONS operation **should never** contain a response body (except for error messages in failure responses)!
+
+### Justification
+
+Supporting the OPTIONS operation can be useful for clients to gain insight into the operations and/or content supported on specific endpoints. However, the OPTIONS operation **should never** return information that could lead to a violation of security and/or privacy regulations.
+
+### Deviations
+
+None.

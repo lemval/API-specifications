@@ -22,10 +22,10 @@ info:
   termsOfService:
   contact:
     name:
-	email:
+    email:
   license:
     name:
-	url:
+    url:
   version:
   x-releaseDate
 ```

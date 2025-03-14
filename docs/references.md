@@ -4,9 +4,9 @@
 |---------|----|----|-------|------|
 | 1   | NEDU EDSN Ontwerpkeuzes                                   | 15-04-2021 | 3.9             | NEDU/EDSN     |
 | 2-1 | [API Strategie Algemeen (Nederlandse API Strategie I)      | 20-12-2021 | Handreiking](https://docs.geostandaarden.nl/api/def-hr-API-Strategie-20220309/) | Geonovum e.a. |
-| 2-2 | REST-API Design Rules (Nederlandse API Strategie IIa)     | 09-07-2020 | 1.0 Vastgesteld | Geonovum e.a. |
-| 2-3 | API Designrules Extensions (Nederlandse API Strategie IIb)| 13-10-2021 | Handreiking     | Geonovum e.a. |
-| 3   | TC021 Vastlegging datum/tijd conventies                   | 28-09-2011 | 1.0             | NEDU TC       |
+| 2-2 | [REST-API Design Rules (Nederlandse API Strategie IIa)](https://docs.geostandaarden.nl/api/vv-st-API-Designrules-20200117/) | 09-07-2020 | 1.0 Vastgesteld | Geonovum e.a. |
+| 2-3 | [API Designrules Extensions (Nederlandse API Strategie IIb)](https://docs.geostandaarden.nl/api/API-Strategie-ext/) | 13-10-2021 | Handreiking     | Geonovum e.a. |
+| 3   | [TC021 Vastlegging datum/tijd conventies](https://energiedatawijzer.nl/documenten/tc021-vastlegging-datum-tijd-conventies/) | 28-09-2011 | 1.0             | NEDU TC       |
 | 4   | TC028 Veldlengtes in berichten                            | 28-10-2015 | 1.0             | NEDU TC       |
 | 7   | [W3C DTF Note ISO 8601](https://www.w3.org/TR/NOTE-datetime) | 15-09-1997 |                 | W3C           |
 | 8   | [API Strategie Digitaal Stelsel Omgevingswet](https://aandeslagmetdeomgevingswet.nl/digitaal-stelsel/aansluiten/standaarden/api-en-uri-strategie/)             | 26-03-2020 | 2.0 Vastgesteld | A.J. Sloos e.a.|
@@ -15,4 +15,4 @@
 | 11 |  [Project Notificatieservices](https://github.com/VNG-Realisatie/notificatieservices) | 30-06-2022 | 1.0 | VNG Realisatie | 
 | 12 | [NL GOV profile for CloudEvents](https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/) | 30-05-2024 | Draft | Logius |
 
-The API Strategy of the Dutch Government, as mentioned under [2], can be found on the [**Kennisplatform API's**](https://developer.overheid.nl/communities/kennisplatform-apis).
+The API Strategy of the Dutch Government (known as ASNO) as mentioned under [2], can be found on the site: [**Kennisplatform API's**](https://developer.overheid.nl/communities/kennisplatform-apis).

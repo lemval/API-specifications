@@ -1,7 +1,7 @@
 
 ## Event Data Specification
 
-This Event Data Specification is a guideline for events designed and developed by the energy sector and takes precedence over the NL GOV profile for CloudEvents.
+This Event Data Specification is a guideline for events designed and developed by the energy sector and takes precedence over the NL GOV profile for CloudEvents [\[12\]](../references.html).
 
 These specification guidelines are grouped by theme:
 1. specification of the defined context attributes. Each type of event (information-poor or information-rich) must contain this defined attribute set. This is described in guidelines ID01 to ID08

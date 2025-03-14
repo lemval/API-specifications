@@ -224,9 +224,16 @@ For DELETE operations on a collection, it may be useful to include information i
 A PATCH operation is always performed on a unique resource (i.e., a URL that determines the unique identity of the resource). With a PATCH operation, it is possible to selectively update parts of a resource. Within the HTTP standard, PATCH is a special case because it is not part of the core HTTP specification but is instead described in several separate RFCs (thus, it should be considered an extension to HTTP). There are also multiple forms of PATCH, each with its own challenges. [This web page](https://williamdurand.fr/2014/02/14/please-dont-patch-like-that/) provides a useful overview and also refers to an alternative implementation ([JSON Merge Patch](https://datatracker.ietf.org/doc/html/rfc7396)).
 
 The original implementation of PATCH ([JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902)) uses a set of “update rules” that allow the requester to specify exactly what should be done (delete, add, replace, copy). This is a relatively complex mechanism but has the advantage of explicitly defining the intended changes. Example:
-
-![PatchExample](./PatchExample.png)
-
+```json
+[
+{ "path": "/a/b/c", "op": "test", "value": "foo" },
+{ "path": "/a/b/c", "op": "remove" },
+{ "path": "/a/b/c", "op": "add", "value": ["foo", "bar"] },
+{ "path": "/a/b/c", "op": "replace", "value": 42 },
+{ "path": "/a/b/c", "op": "move", "to": "/a/b/d" },
+{ "path": "/a/b/d", "op": "copy", "to": "/a/b/e" }
+]
+```
 This model is fully described in [RFC 6902](https://datatracker.ietf.org/doc/html/rfc6902) and is allowed as an implementation, provided it is explicitly mentioned in the service design documentation, as it requires considerable implementation effort from both the client and the server. The advantage, however, is that it makes the intended changes very explicit.
 
 The content type for this PATCH variant **should** be `application/json-patch+json`.

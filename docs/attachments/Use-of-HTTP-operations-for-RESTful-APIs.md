@@ -131,7 +131,7 @@ The request payload for a complex search function may consist of a **choice** be
 
 **Example:**
 
-![image-SearchFilters](./SearchFilters.png)
+<img src="./SearchFilters.png" width="600" height="600"/>
 
 The example illustrates a complex search with three different filter sets. The **scenario** discriminator attribute explicitly indicates which filter set is relevant.
 
@@ -295,7 +295,13 @@ None.
 
 The purpose of the OPTIONS operation is to request metadata for a given endpoint (a resource). The response consists of a set of HTTP header parameters that indicate, among other things, which operations are allowed for that endpoint, whether and for how long responses may be cached, which security requirements apply, which content types are accepted, etc. Here is an example of an OPTIONS response:
 
-![OptionsExample](./OptionsExample.png)
+```HTTP
+HTTP/1.1 204 No Content
+Allow: OPTIONS, GET, HEAD, POST
+Cache-Control: max-age=604800
+Date: Thu, 13 Oct 2016 11:45:00 GMT
+Server: EOS (lax004/2813
+```
 
 The server **may** send the following header parameters in an OPTIONS response:
 

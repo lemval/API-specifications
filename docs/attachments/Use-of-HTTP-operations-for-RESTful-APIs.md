@@ -1,4 +1,4 @@
-# Appendix E: Use of HTTP operations for RESTful APIs
+# Use of HTTP operations for RESTful APIs
 
 ## Introduction
 

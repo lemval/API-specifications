@@ -22,7 +22,7 @@ Open section for explanation, rationale and exception conditions
 
 #### Explanation
 
-See [appendix E](../attachments/Appendix-E-Use-of-HTTP-operations-for-RESTful-APIs.html) for a detailed description of the operations mentioned.
+See [appendix](../attachments/Use-of-HTTP-operations-for-RESTful-APIs.html) for a detailed description of the operations mentioned.
 
 This guideline is also available in ASNO and is explicitly added to give a more profound explanation of this design rule.
 

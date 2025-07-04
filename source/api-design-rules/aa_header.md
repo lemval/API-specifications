@@ -2,13 +2,13 @@
 
 | <!-- -->             | <!-- -->   |
 | :------------------- | :--------- |
-| __Code__                 | BSCMF0028    |
+| __Code__                 |     |
 | __Version__              | 5.1-web        |
 | __Status__               | Concept      |
 | __Publication date__     | 2025-02-15 |
 {: .header-table }
 
-This document is a publication of MFF BAS. In the pursuit of completeness and correctness of data, we kindly request you to submit comments, additions and improvements regarding this document to EDSN by [raising a ticket]({{ site.github.issues_url }}) in this repostory. You can contact [EDSN](https://www.edsn.nl/contact/) in the manner below, also for more information about this document.
+This document is a publication of MFF BAS. In the pursuit of completeness and correctness of data, we kindly request you to submit comments, additions and improvements regarding this document by [raising a ticket]({{ site.github.issues_url }}) in this repository. 
 
 ## Document annotations
 

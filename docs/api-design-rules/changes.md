@@ -1,4 +1,4 @@
-# Change management (API Design rules)
+# Release history (API Design rules)
 
 The changes are sorted by most recent last.
 

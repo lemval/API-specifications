@@ -1,14 +1,14 @@
-# API design rules
+# API Design Rules
 
 | <!-- -->             | <!-- -->   |
 | :------------------- | :--------- |
 | __Code__                 |     |
 | __Version__              | 5.1-web        |
 | __Status__               | Concept      |
-| __Publication date__     | 2025-02-15 |
+| __Publication date__     | 2025-07-04 |
 {: .header-table }
 
-This document is a publication of MFF BAS. In the pursuit of completeness and correctness of data, we kindly request you to submit comments, additions and improvements regarding this document by [raising a ticket]({{ site.github.issues_url }}) in this repository. 
+This document is a publication of MFFBAS. In the pursuit of completeness and correctness of data, we kindly request you to submit comments, additions and improvements regarding this document by [raising a ticket]({{ site.github.issues_url }}) in this repository. 
 
 ## Document annotations
 
@@ -30,11 +30,11 @@ The current generation of applications are realized according to a service-orien
 
 Within the context of service-oriented architecture, the design of web services and APIs is of great importance. A poorly designed web service or API can make the development of applications that call these services unnecessarily complex. From a business perspective, a poorly designed web service or API can have a negative effect on the flexibility of business processes. On the other hand, well-designed web services and APIs can improve the development speed of applications and the flexibility of business processes.
 For the design and development of web services, the former NEDU TC, in close cooperation with EDSN, has drawn up the design choices for web services[^1]. The parties in the Dutch energy market, united within the NEDU, have expressed the need to also define guidelines for the design of APIs. Commissioned by the former Technical Committee NEDU (TC), a working group has drawn up the following documents[^2]:
-* API strategy
-* API design guidelines (this document)
+* API Strategy
+* API Design Rules (this document)
 * API URI guidelines
 
-The starting point for the API design guidelines is the API Strategy for the Dutch government. In addition, the energy sector-specific design guidelines are laid down in the paragraph Energy sector-specific guidelines API design. of the API design guidelines.
+The starting point for the API Design Rules is the API Strategy for the Dutch government. In addition, the energy sector-specific design rules are laid down here.
 
 [^1]: Where this document refers to APIs, we mean REST APIs.
 [^2]: Referred documents can be found in the global [document reference](../references.md).

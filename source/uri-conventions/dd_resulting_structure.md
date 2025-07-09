@@ -20,15 +20,15 @@ demand management.
 | Routing to service | cmf | cloud application in the EDSN landscape |
 | Root level         | energy-market | NBility BOM level 1 |
 | Level 2            | market-participant | NBility BOM level 2 |
-| Level 3            | market-agreement | NBility BOM level 3 |
-| API name           | contract-management | contraction of capability and BOM level 3 |
+| Level 3    | energy-market            | NBility BOM level 3                       |
+| API name   | energy-market-management | contraction of capability and BOM level 3 |
 | Version            | v1 | |
-| Collection         | market-agreements | according to CIM and NBility 6.1.3. |
+| Collection | market-agreements        | existing class/object in CIM and NBility  |
 | Resource identifier| 879999999999999999 | |
 
 A URI based on the above example would then be as follows formed:
 
-`https://api.cmf.energysector.nl/energy-market/market-participant/market-agreement/contractmanagement/v1/market-agreements/879999999999999999`
+`https://api.cmf.energysector.nl/energy-market/market-participant/energy-market/energy-market-management/v1/market-agreements/879999999999999999`
 
 Some actual examples:
 
@@ -42,4 +42,4 @@ Some actual examples:
 | energy-market | market-process     | energy-exchange  | conversion-factors-retrieval | gridarea-calorificconversion-factors |
 | energy-market | market-process     | energy-exchange  | readings-retrieval | 24months-readings |
 
-*Some compositions deviate from the standard derivation in section 3.5.4*
+*Some compositions deviate from the standard derivation.*

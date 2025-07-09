@@ -50,24 +50,22 @@ As the root level follows the NBility business object model (BOM for short), the
 
 This level represents all related resources and the associated business function. The name should be as generic as possible to allow for later expansion of the API without having to name a new API. As a guideline, a contraction of the NBility object at level three and the capability at level three can be used.
 
-_Note that NBility 2.3 mentions different capabilities_
-
-|NBility designation|Capability level three|BOM level three|API name|
-| --- | --- | --- | --- |
-|6.1.1| Maintain relations with market parties | market-participant | market-participant-management |
-|6.1.2| Handle questions of market parties     | market-case        | market-case-management |
-|6.1.3| Operate energy markets                 | market-agreement   | contract-management |
-|6.1.4| Manage energy grid markets             | energy-market      | energy-market-management |
-|6.2.1| Manage connections/allocation points   | connection         | connection-management |
-|6.2.2| Manage installations behind connections| facility           | facility-management |
-|6.2.3| Manage congestion areas                | congestion-area    | congestion-area-management |
-|6.3.1| Execute energy market procedures       | market-request     | market-request-management |
-|6.3.2| Exchange energy predictions            | energy-schedule    | energy-schedule-communication |
-|6.3.3| Manage energy exchange                 | energy-exchange    | energy-exchange-quantification |
-|6.3.4| Facilitate market settlement           | market-invoice     | market-invoice-assignment |
-|6.3.5| Communicate upward or downward regulation demand|regulation-demand|regulation-demand-notification|
-|6.3.6| Manage upward or downward regulation supply|regulation-offer| regulation-offer-management |
-|6.4.3| Manage issued permissions              |consent-fromsystem-user|user-consent-management|
+|Capability level three|BOM level three|API name|
+| --- | --- | --- |
+| Maintain relations with market parties              | Market participant                   | market-participant-management  |
+| Handle questions of market parties                  | Market request                       | market-request-management      |
+| Operate energy markets                              | Energy market                        | energy-market-management       |
+| Manage connections / allocation points              | Connection                           | connection-management          |
+| Manage installations behind connections             | Facility                             | facility-management            |
+| Manage congestion areas                             | Congestion area                      | congestion-area-management     |
+| Execute energy market procedures                    | Market activity                      | market-activity-management     |
+| Exchange energy predictions                         | Energy forecast                      | energy-forecast-communication  |
+| Manage energy exchange                              | Energy exchange                      | energy-exchange-quantification |
+| Facilitate market settlement                        | Attribution                          | attribution-assignment         |
+| Communicate upward or downward regulation demand    | Upward or downward regulation demand | regulation-demand-notification |
+| Manage upward or downward regulation supply         | Upward or downward regulation offer  | regulation-offer-management    |
+| Make grid operator data available for third parties | Grid operator data provision         | grid-operator-data-retrieval   |
+| Manage issued permissions                           | Consent from system user             | user-consent-management        |
 
 The contractions in the last column are not an official part of the NBility model.
 

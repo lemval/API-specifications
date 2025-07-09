@@ -123,7 +123,7 @@ but a preference for application in the given order.
 When naming resources, Dutch legislation therefore prevails over the definitions from the
 CIM standard, which in turn prevail over the business objects from NBility. The last option is to choose a resource name yourself (by a delegation of network operators and EDSN) if the models/standards do not (cannot) provide for this. This name will then have to be explained to the users.
 The name of a resource will have to be determined by a delegation of network operators
-and EDSN. Currently (early 2023), this task lies with the WG API Strategy, which, in addition 
+and EDSN. Currently (early 2023), this task lies with the API Strategy Working Group, which, in addition 
 to the name, also checks the specification of APIs for the CMF domain, for the correct application 
 of the API and URI guidelines.
 

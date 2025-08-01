@@ -1,8 +1,8 @@
 ### ID 13
 
-| Title    | __13 - Defining date/time__ |
+| Title    | __13 - Defining date, time and date-time__ |
 | :----    | :---------- |
-| Strategy | The date/time notation must be complete and unambiguous. |
+| Strategy | The date and time notation must be complete and unambiguous. |
 
 <details><summary>
 
@@ -12,14 +12,14 @@ Open section for explanation, rationale and exception conditions
 
 #### Explanation
 
-Date and datetime notation must conform to W3C DTF Note ISO 8601 [\[7\]](../references.html).
+Date, time and date-time notation must conform to W3C DTF Note ISO 8601 [\[7\]](../references.html).
 This ensures unambiguous interpretation of date/time internationally.
 
-Advice:
+Advice for specification of a time or a timestamp:
 + Use UTC and the "Z" as time zone designator;
 + Specify the time with seconds and milliseconds. If milliseconds are not known, use "000".
 
-Example: `2020-02-07T14:55:42.000Z`
+Example: `2020-02-07T14:55:42.000Z` or `14:55:43.000Z` 
 
 #### Rationale
 

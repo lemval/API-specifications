@@ -2,7 +2,7 @@
 
 | Title    | __23 - API specification__ |
 | :----    | :---------- |
-| Strategy | APIs are to be specified as [OAS v3](https://spec.openapis.org/#openapi-specification), and rendered in either JSON or YAML. |
+| Strategy | APIs are to be specified as [OAS v3](https://spec.openapis.org/#openapi-specification) and rendered in either JSON or YAML. |
 
 
 <details><summary>
@@ -13,7 +13,7 @@ Open section for explanation, rationale and exception conditions
 
 #### Explanation
 
-APIs are to be specified as OpenAPI Specification v3 or higher (OAS3). Details to be found at the [OpenAPI initiative](https://www.openapis.org/) and [https://spec.openapis.org/#openapi-specification] for all specification versions.  This is conform ASNO API-16 [\[2\]](../references.html).
+APIs are to be specified as OpenAPI Specification v3.0 or higher (OAS3). Details to be found at the [OpenAPI initiative](https://www.openapis.org/) and [https://spec.openapis.org/#openapi-specification] for all specification versions.  This is conform ASNO API-16 [\[2\]](../references.html).
 
 The representation format of an OpenAPI specification can be either JSON or YAML, depending on preference. Preferred format is JSON, in compliance with ASNO API-51 [\[2\]](../references.html).
 

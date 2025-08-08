@@ -28,7 +28,7 @@ By including enumerations in the JSON Schema, the API call can be rejected prema
 
 #### Exceptions
 
-The use of *Dynamic sets* as an enumeration is **not** allowed in REST APIs because a change in the range of allowed values will break the API and thus forces all API clients to update to a new version. Depending on the API scope, the impact of these changes can be severe. Dynamic sets muse thus be exchanged otherwise whilst the allowed values of these sets are exchanged using an alternative mechanism (such as the service design documentation).
+The use of *Dynamic sets* as enumerations is **not** allowed in REST APIs because a change in the range of allowed values is a breaking change and forces all API clients to update to a new version. Therefore, dynamic sets should be exchanged through other means, while the permitted values are provided via an alternative mechanism - such as service design documentation.
 
 </details>
 

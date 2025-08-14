@@ -20,6 +20,6 @@ URIs consist of a domain part and a resource part. The internet standard RFC3986
 
 #### Examples
 
-`https://api.cmf.energysector.nl/energy-market/market-participant/energy-market/energy-market-management/v1/market-agreements/879999999999999999`
+`https://api.cmf.energysector.nl/energy-market/market-participant/market-agreement/contract-management/v1/market-agreements/879999999999999999`
 
 </details>

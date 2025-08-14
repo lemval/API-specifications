@@ -82,10 +82,11 @@ When using GET as a search query, special attention should be given to the combi
 
 A PUT request is always executed on a unique resource (i.e., a URL that determines the unique identity of the resource). The result is that the server replaces the existing resource (if present) with a new version, where the state is determined by the received attributes while maintaining the resource’s identity. This means that some attributes may be removed (if they are no longer included in the new state), while new attributes may be added (if they were not present in the previous state).
 
-Additionally, the requester **may** include an **If-Match** header containing the ETag key known to them for the respective resource. This allows the server to validate the resource state before executing the update (see guideline XXX for details).
+Additionally, the requester **may** include an **If-Match** header containing the ETag key known to them for the respective resource. This allows the server to validate the resource state before executing the update (see [RFC-7232](https://datatracker.ietf.org/doc/html/rfc7232) for details).
 
 The operation **may** result in the following response codes:
 
+- **200 - Ok**: The replacement was successful and the response body contains a *status record* providing useful metadata pertaining to the operation. *This is an exception* (see "Exception" below). The response **may** optionally include an **ETag** header containing the (new) ETag key of the modified resource.
 - **202 – Accepted**: The request has been received and successfully validated but has not yet been executed. This can happen in case of asynchronous processing. If the requester wants to ensure that the changes have been applied, they must perform a GET request at a later time to check the state.
 - **204 – No Content**: The replacement was successful, and no response is returned, as the updated resource state can be retrieved via a GET request (see justification under GET). The response **may** optionally include an **ETag** header containing the (new) ETag key of the modified resource.
 - **404 – Not Found**: The provided ID does not correspond to a valid resource.
@@ -95,13 +96,13 @@ A PUT request must never contain a response body (except for responses related t
 
 ### Justification
 
-The PUT operation should be used primarily for updating the existing state of a resource. Within the principle of separation of concerns, this is also its only intended purpose. Creating a new resource instance or retrieving the updated resource state does not fall under the responsibility of the PUT operation. For this reason, PUT does not return a response body, except for success or error messages.
+The PUT operation should be used primarily for updating the existing state of a resource. Within the principle of separation of concerns, this is also its **only** intended purpose. Creating a new resource instance or retrieving the updated resource state does not fall under the responsibility of the PUT operation. For this reason, PUT does not return a response body, except for status- or error messages.
 
-Another reason why PUT does not return a resource as a response is related to caching. A PUT operation is **not** idempotent, and its results are not necessarily cacheable, unlike GET.
+Another reason why PUT does not return a resource as a response is related to caching. The results of a PUT operation are not necessarily cacheable, unlike GET.
 
 ### Exception
 
-None.
+In **special cases**, a PUT operation **may** return a **200 – OK** response along with a response payload containing details about the update process. However, this **does not** mean that the full resource state is included in the response. Instead, it is primarily used for returning status records that provide metadata pertaining to the executed operation.
 
 ------
 
@@ -117,7 +118,7 @@ A POST operation in this form should never contain a response body (except for r
 
 The operation **may** result in the following response codes:
 
-- **201 – Created**: The new resource has been successfully created. The operation **should** return an absolute URL in the **Location** header, allowing retrieval of the newly created resource via GET. If the operation cannot return a complete URL, it is also permitted to return only the resource ID of the newly created resource via the **X-Object-ID** header.
+- **201 – Created**: The new resource has been successfully created. The operation **should** return an absolute URL in the **Location** header, allowing retrieval of the newly created resource via GET. If the operation cannot return a complete URL, it is also permitted to return only the resource ID of the newly created resource via the **X-Object-ID** header. Finally, the response body **may** contain a *status record* providing useful metadata pertaining the operation. Please note that it is **not** allowed to return the entire resource! The response **may** optionally include an **ETag** header containing the ETag key of the created resource.
 - **202 – Accepted**: The request has been received and successfully validated but has not yet been executed. This occurs, for example, in asynchronous processing. The implementation is responsible for informing the requester about the progress and how the identity of the created resource is communicated (e.g., via a callback interface).
 - **409 – Conflict**: A new resource cannot be created because the provided state conflicts with existing resources and/or the current state of the collection (e.g., if the collection is locked).
 
@@ -149,9 +150,9 @@ The operation **may** result in the following response codes:
 
 A more 'REST-compliant' alternative of a complex search is also possible. This would require three separate operations:
 
-1. Create a "search resource" using POST and filters (effectively creating a "view" on the data).
-2. Perform one or more GET operations on the resource (view) to retrieve the data.
-3. Delete the "search resource" using DELETE.
+1. Create a "*search resource*" using *POST* and filters (effectively creating a "view" on the data). This returns the *search-resource* through the *Location* header;
+2. Perform one or more *GET* operations on the search-resource returned by step 1 to retrieve the data;
+3. Delete the search-resource using *DELETE* on it's endpoint.
 
 This implementation, using persistent filters, can be advantageous when the filters are complex, expensive to create and/or are reusable over a longer period of time.
 
@@ -159,13 +160,13 @@ This implementation, using persistent filters, can be advantageous when the filt
 
 #### POST as a Create Operation
 
-Use the POST operation primarily for creating a new resource. As part of the principle of separation of concerns, this is its only responsibility. Retrieving the updated resource state does **not** fall under the responsibility of the POST operation. For this reason, POST does not return a response body, except for success or error messages. However, it does return a link to the newly created resource, which can then be retrieved using GET.
+Use the POST operation primarily for creating a new resource. As part of the principle of separation of concerns, this is its only responsibility. Retrieving the updated resource state does **not** fall under the responsibility of the POST operation. For this reason, POST does not return a response body, except for status- or error messages. However, it does return a link to the newly created resource, which can then be retrieved using GET.
 
 Another reason why POST does not return a resource in its response is related to caching. A POST operation is **not** idempotent, and its results are not cacheable, unlike GET.
 
 #### POST as a Complex Search Function
 
-Using POST to implement complex search functions is a widely accepted **best practice** as long as no alternative exists (the QUERY operation is under development, but general support for it is still lacking).
+Using POST to implement complex search functions is a widely accepted **best practice** as long as no alternative exists (the *QUERY* operation is under development, but general support for it is still lacking).
 
 From a maintainability and readability perspective, it is important to distinguish between both variants. Therefore, it is recommended to place the **search** variant under a separate **/search** endpoint to avoid future conflicts with the **create** variant.
 
@@ -180,7 +181,7 @@ In some cases, both parties may have a resource key. In such situations, the par
 1. The requester sends their key as the master resource ID to the server. When creating the resource on the server, this key is replaced by a new server-generated key, and the requester’s key is moved to another predefined attribute.
 2. The requester sends their key as an alternative resource ID to the server. When creating the resource, nothing changes; only a new server-generated master resource ID is added.
 3. The requester sends their key as the master resource ID to the server. If the key is valid as a master resource ID, the server adopts it. Both parties now have the same key. If the key is invalid, the server returns a **409 – Conflict** error.
-4. The requester sends their key as the master resource ID to the server. The server ignores this key and replaces it with its own key when creating the resource. The requester detects this change (e.g., by inspecting the **Location**header) and updates their version with the new key.
+4. The requester sends their key as the master resource ID to the server. The server ignores this key and replaces it with its own key when creating the resource. The requester detects this change (e.g., by inspecting the **Location** header) and updates their version with the new key.
 
 In all cases, the requester must never assume that a provided key will actually be used as the unique resource identifier, unless this is explicitly specified in the service design documentation!
 
@@ -190,7 +191,7 @@ In all cases, the requester must never assume that a provided key will actually 
 
 ### Explanation
 
-A DELETE operation on a single resource is intended to remove that resource. More specifically, this means that subsequent operations on the resource should return a **404 (“Not Found”)** error code. Additionally, the requester **may** include an **If-Match** header containing the ETag key known to them for the respective resource. This allows the server to validate the resource state before executing the delete operation (see guideline XXX for details).
+A DELETE operation on a single resource is intended to remove that resource. More specifically, this means that subsequent operations on the resource should return a **404 (“Not Found”)** error code. Additionally, the requester **may** include an **If-Match** header containing the ETag key known to them for the respective resource. This allows the server to validate the resource state before executing the delete operation (see [RFC-7232](https://datatracker.ietf.org/doc/html/rfc7232) for details)..
 
 In theory, a DELETE operation can also be applied to an entire collection, resulting in the removal of all resources within that collection.
 
@@ -198,7 +199,7 @@ A DELETE operation should never contain a response body (except for responses re
 
 The operation **may** result in the following response codes:
 
-- **200 – OK**: The resource(s) have been successfully deleted, and a status overview is available in the response payload. This is an exception (see "Exception" below).
+- **200 – OK**: The resource(s) have been successfully deleted, and a status overview is available in the response payload. *This is an exception* (see "Exception" below).
 - **202 – Accepted**: The request has been received and successfully validated but has not yet been executed. This can occur in cases of asynchronous processing. If the requester wants to ensure that the resource has indeed been deleted, they must perform a GET request at a later time.
 - **204 – No Content**: The resource(s) have been successfully deleted.
 - **409 – Conflict**: The operation cannot be executed because the current state does not allow it (e.g., due to an ETag mismatch or because the collection or resource is locked).
@@ -244,6 +245,7 @@ Additionally, along with the resource identification, the client **may** also pr
 
 The operation **may** result in the following response codes:
 
+- **200 - Ok**: The update was successful and the response body contains a *status record* providing useful metadata pertaining the operation. *This is an exception* (see "Exception" below). The response **may** optionally include an **ETag** header containing the (new) ETag key of the modified resource.
 - **202 – Accepted**: The request has been received and successfully validated but has not yet been executed. This can happen in cases of asynchronous processing. If the requester wants to ensure that the changes have been applied, a later GET request must be performed to check the state.
 - **204 – No Content**: The update was successful, and no response is returned since it can be retrieved via a GET operation (see justification under GET).
 - **404 – Not Found**: The specified ID does not correspond to a valid resource.
@@ -253,11 +255,11 @@ A PATCH operation **should not** contain a response body (except for error messa
 
 ### Justification
 
-The PATCH operation is intended for selectively updating a resource. In the context of responsibility separation, this is also its sole function. Returning the latest known state, for example, does **not** fall under the responsibility of this operation. For this reason, PATCH does not return a response body, other than success or error messages.
+The PATCH operation is intended for selectively updating a resource. In the context of responsibility separation, this is also its sole function. Returning the latest known state, for example, does **not** fall under the responsibility of this operation. For this reason, PATCH does not return a response body, other than status- or error messages.
 
-### Deviations
+### Exception
 
-None.
+In **special cases**, a PATCH operation **may** return a **200 – OK** response along with a response payload containing details about the update process. However, this **does not** mean that the full resource state is included in the response. Instead, it is primarily used for returning status records that provide metadata pertaining to the executed operation.
 
 ------
 
@@ -283,7 +285,7 @@ A HEAD operation **should never** contain a response body (except for error mess
 
 The HEAD operation can be useful for retrieving metadata (such as ETag and other headers) without receiving the full payload. Possible use cases include checking whether a resource exists or determining if a resource has been modified (in which case the server should return the ETag header).
 
-### Deviations
+### Exception
 
 None.
 
@@ -326,6 +328,6 @@ An OPTIONS operation **should never** contain a response body (except for error 
 
 Supporting the OPTIONS operation can be useful for clients to gain insight into the operations and/or content supported on specific endpoints. However, the OPTIONS operation **should never** return information that could lead to a violation of security and/or privacy regulations.
 
-### Deviations
+### Exception
 
 None.

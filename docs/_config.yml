@@ -7,13 +7,14 @@ kramdown:
 
 #theme: jekyll-theme-minimal
 #remote_theme: pages-themes/slate@v0.2.0
-remote_theme: pages-themes/modernist@v0.2.0
+#remote_theme: pages-themes/modernist@v0.2.0
+remote_theme: lemval/jekyll-hetnormo
 
 plugins:
 - jekyll-remote-theme
 
 show_downloads: true
 
-title: MFFBAS API Specifications
+title: Het Normo API Specifications
 description: Standards and guidelines for exchange of energy data.
 

@@ -32,5 +32,14 @@ Releases are done by merging the develop branch into the main branch, tagging it
 
 How comments can be made and are handled is described on the public pages. See the link on the generated site.
 
+## Style changes
+
+To set up your environment to develop the theme, run `bundle install`. You might also need to `gem install github-pages && gem install jekyll-seo-tag`.
+
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+
+The base style sheet of the original theme is excluded from use for this repository (by means of not including it).
+
+
 
 

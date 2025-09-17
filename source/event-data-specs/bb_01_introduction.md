@@ -14,7 +14,7 @@ event-driven as a government.
 This document is in line with this vision and is a further concrete elaboration of it. The main 
 purpose of this document is to define a specification for describing event data,
 or events, which we will further refer to as the **Event Data Specification**. This specification 
-was developed for the energy sector by the API Strategy Working Group on behalf of MFF BAS.
+was developed for the energy sector by the API Strategy Working Group on behalf of Het Normo.
 
 To carry out this assignment, the API Strategy Working Group sought cooperation with the 
 [API Knowledge Platform](https://developer.overheid.nl/communities/kennisplatform-apis), or in Dutch _Kennisplatform API's_, which has been commissioned to develop a government-wide usable 

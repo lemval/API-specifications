@@ -1,4 +1,4 @@
-# MFFBAS API Specifications
+# Het Normo API Specifications
 
 Hi there,
 

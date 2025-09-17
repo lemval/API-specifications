@@ -4,8 +4,6 @@
 | :----    | :---------- |
 | Strategy | The query parameter '_expand' is used to expand linked resources. |
 
-**DRAFT**
-
 <details><summary>
 
 Open section for explanation, rationale and exception conditions 

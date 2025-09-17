@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+// @import "{{ site.theme }}";
 
 /* Below are customed styles. Do not remove anything above this line */
 
@@ -22,6 +22,10 @@ pre {
     padding: 10px;
     color: #f8f8f2;
     margin: 0 0 15px 0;
+}
+
+nav {
+    margin-top: 10px;
 }
 
 /** Customized class for decisions. **/
@@ -60,15 +64,154 @@ h3 {
     padding: 0.3em;
 }
 
-h2, h3, h4, h5, h6 {
+h2 {
+    margin: 30px 0 8px 0;
+}
+
+h3, h4, h5, h6 {
     margin: 0 0 8px 0;
 }
 
 th, td {
     padding: 5px 5px;
     vertical-align: top;
+    border-bottom: 1px solid #aaa;
 }
 
 p, ul, ol, table, pre, dl {
     margin: 0 0 12px;
+}
+
+.footer {
+    margin: 0;
+	font-size: 18px;
+}
+
+body {
+  font-family: 'Figtree', sans-serif;
+  background-color: #f9f9f9;
+  color: #002b45;
+  margin: 0;
+  padding: 0;
+  font-size: 21px;
+  font-weight: 300;
+}
+
+header {
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: rgb(0, 100, 128);
+}
+
+footer {
+  background-color: rgb(0, 100, 128);
+  color: rgb(200, 200, 200);
+  padding: 5px 20px;
+}
+
+#content {
+  margin-top: 100px;
+}
+
+a {
+  /* color: rgb(0, 100, 128); */
+  color: rgb(53, 222, 129);
+  text-decoration: none;
+  /* font-weight: bold; */
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.version-banner {
+  background-color: rgb(53, 222, 129);
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.sidebar {
+  background-color: rgb(0, 100, 128);
+  border-color: black;
+  border-style: solid;
+  border-width: thin;
+  margin-top: 1px;
+  padding: 10px;
+  width: 200px;
+  min-height: 100vh;
+  float: left;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 1rem;
+}
+
+.sidebar a {
+  color: rgba(255, 255, 255, 0.85);
+  // font-weight: bold;
+}
+
+.doc-content {
+  margin-left: 220px;
+  padding: 2rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+ul.downloads {
+  list-style:none;
+  height:35px;
+  padding:0;
+  background: #f4f4f4;
+  border-radius:5px;
+  border:1px solid #e0e0e0;
+  width:185px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.downloads li {
+  width:60px;
+  float:left;
+  // border-right:1px solid #e0e0e0;
+  height:40px;
+}
+
+.downloads li:first-child a {
+  border-radius:5px 0 0 5px;
+}
+
+.downloads li:last-child a {
+  border-radius:0 5px 5px 0;
+}
+
+.downloads a {
+  line-height:1;
+  font-size:11px;
+  color:#676767;
+  display:block;
+  text-align:center;
+  padding-top:6px;
+  height:34px;
+}
+
+.downloads a:hover, .downloads a:focus {
+  color:#675C5C;
+  font-weight:bold;
+}
+
+.downloads ul a:active {
+  background-color:#f0f0f0;
 }

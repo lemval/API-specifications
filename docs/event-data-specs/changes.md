@@ -1,4 +1,4 @@
-# Change management (Event Data)
+# Release history (Event Data)
 
 The changes are sorted by most recent last.
 

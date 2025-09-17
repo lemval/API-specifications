@@ -9,10 +9,10 @@ Please navigate to the site https://mffbas-copsa.github.io/API-Specifications/ f
 
 ## Contributing
 
-This repository is managed by the workgroup MFFBAS API, which consists of members from EDSN and from several grid operators.
+This repository is managed by the API Strategy Working Group, which consists of members from EDSN and from several grid operators.
 Please see the generated document on how you can participate.
 
-For working on this repository, the workgroup follows the [instructions](instructions/readme.md).
+For working on this repository, the API Strategy Working Group follows the [instructions](instructions/readme.md).
 
 ## License
 

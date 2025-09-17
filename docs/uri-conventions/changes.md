@@ -1,4 +1,4 @@
-# Change management (URI Conventions)
+# Release history (URI Conventions)
 
 The changes are sorted by most recent last.
 

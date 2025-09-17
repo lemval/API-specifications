@@ -11,8 +11,8 @@
 | 7 | [W3C DTF Note ISO 8601](https://www.w3.org/TR/NOTE-datetime) | 15-09-1997 | | W3C |
 | 8 | [API Strategie Digitaal Stelsel Omgevingswet](https://aandeslagmetdeomgevingswet.nl/digitaal-stelsel/aansluiten/standaarden/api-en-uri-strategie/) | 26-03-2020 | 2.0 Vastgesteld | A.J. Sloos e.a.|
 | 9 | [Problem Details for HTTP APIs – RFC9457](https://www.rfc-editor.org/rfc/rfc9457.html) | July 2023 | | Mark Nottingham, Erik Wilde, Sanjay Dalal|
-| 10 | CoP SA Visiedocument Event Driven Architecture | 17-01-2024 | 1.0 | CoP SA MFF BAS |
+| 10 | [CoP SA Visiedocument Event Driven Architecture](https://energiedatawijzer.nl/documenten/cop-sa-visie-event-driven-architecture-2023/)| 18-01-2024 | 1.0 | CoP SA MFF BAS |
 | 11 | [Project Notificatieservices](https://gim/VNG-Realisatie/notificatieservices) | 30-06-2022 | 1.0 | VNG Realisatie | 
 | 12 | [NL GOV profile for CloudEvents](https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/) | 30-05-2024 | Draft | Logius |
 
-The API Strategy of the Dutch Government (known as ASNO) as mentioned under [2], can be found on the site: [**Kennisplatform API's**](https://developer.overheid.nl/communities/kennisplatform-apis).
+The API Strategy of the Dutch Government (known as ASNO) as mentioned under [2], can be found on the site: [**Kennisplatform API's**](https://developer.overheid.nl/communities/kennisplatform-apis). See also [**GeoNovum API Strategie**](https://www.geonovum.nl/geo-standaarden/api-strategie).

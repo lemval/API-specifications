@@ -24,7 +24,7 @@ This guideline prescribes that the maximum event file size is 256 kB, as relaxat
 
 #### Constraints
 
-- Advised maximum message size should be limited to 64 kB.
-- Allowed maximum message size is 256 kB.
+- Advised maximum message size should be limited to 64 kB
+- Allowed maximum message size is 256 kB
 
 </details>

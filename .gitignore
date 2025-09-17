@@ -18,3 +18,5 @@ _site/
 Gemfile.lock
 *~
 docs/api-design-rules/index.md
+*.swp
+docs/uri-conventions/index.md

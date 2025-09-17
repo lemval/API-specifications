@@ -1,7 +1,19 @@
-<script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/+esm';
-    mermaid.initialize({startOnLoad:true,theme:'neutral'})
-    await mermaid.run({querySelector:'code.language-mermaid'})
-</script>
+
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Figtree' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <script type="module">
+	import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+	var config = { 
+	    startOnLoad:true, 
+	    theme: 'neutral', 
+	    themeVariables: { lineColor: '#006480' },
+	    flowchart:{ useMaxWidth: false, htmlLabels: true } 
+	};
+	mermaid.initialize(config)
+	await mermaid.run({querySelector:'code.language-mermaid'})
+    </script>
 
 <!-- Themes: default, neutral, dark, forest, base -->

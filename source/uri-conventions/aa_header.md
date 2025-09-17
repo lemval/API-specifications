@@ -59,7 +59,7 @@ provide a practical translation for identifying APIs by developing a structure.
 This document only describes the URI strategy and does not discuss its substantive application. For information on APIs, we refer to the MFFBAS API design guidelines. The use of this naming convention 
 is limited but leading to use within the CMF. In practice, this applies to all REST APIs that EDSN and other sector organisations build and maintain. Other market roles are advised to follow these guidelines as much as possible.
 
-[^1]: Referred documents can be found in the global [document reference](../references.md).
+[^1]: Referred documents can be found in the global [document reference](../references.html).
 
 ## Coherence of the concepts URI, URN, URL and resource
 

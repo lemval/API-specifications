@@ -3,7 +3,23 @@
 
 // @import "{{ site.theme }}";
 
+@import "rouge-github";
+
 /* Below are customed styles. Do not remove anything above this line */
+
+.highlight {
+    padding: 10px 0 10px 0;
+}
+
+pre.highlight {
+    background-color: #e9e9e2;
+    border-radius: 0.625rem;
+    padding: 10px;
+}
+
+.highlight .p, .highlight .pi {
+    color: #111111;
+}
 
 /** Make the site nearly as wide as the page **/
 .wrapper {
@@ -31,11 +47,11 @@ nav {
 /** Customized class for decisions. **/
 .boxed pre {
     padding: 10px;
-    background: #98a2c0;
+    background: #006480;
 }
 
 .boxed code {
-    border: 2px solid #787878;
+    // border: 2px solid #787878;
     padding: 9px 15px 9px 15px;
     margin: -8px;
 }
@@ -75,6 +91,7 @@ h3, h4, h5, h6 {
 th, td {
     padding: 5px 5px;
     vertical-align: top;
+    text-align: left;
     border-bottom: 1px solid #aaa;
 }
 

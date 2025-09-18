@@ -6,13 +6,12 @@ layout: doc
 
 | <!-- -->                 | <!-- -->   |
 | :-------------------     | :--------- |
-| __Code__                 |            |
 | __Version__              | 2.0-web    |
 | __Status__               | Concept    |
 | __Publication date__     | 2025-02-15 |
 {: .header-table }
 
-This document is a publication of MFF BAS. In the pursuit of completeness and correctness of data, we kindly request you to submit comments, additions and improvements regarding this document by [raising a ticket]({{ site.github.issues_url }}) in this repository. 
+This document is a publication of Het Normo. In the pursuit of completeness and correctness of data, we kindly request you to submit comments, additions and improvements regarding this document by [raising a ticket]({{ site.github.issues_url }}) in this repository. 
 
 ### Document annotations
 
@@ -30,7 +29,7 @@ Please find the following information here:
 
 ## Introduction
 
-This publication completes the [MFFBAS API design rules](../api-design-rules) with a strategy on URIs and is the result 
+This publication completes the [Het Normo API design rules](../api-design-rules) with a strategy on URIs and is the result 
 of the effort of the API Strategy Working Group. In order to make REST APIs retrievable, it is necessary to give them a 
 digital address. Within the context of the Internet, these addresses are called URIs, with the most common form being a 
 URL, also known as a link. The URI guidelines were chosen to be inspired by the URI strategy of the DSO as this strategy 
@@ -56,10 +55,10 @@ Why is there a need for URI guidelines? URIs are inextricably linked to APIs. Ev
 that is offered via an API needs an identification (URI), which makes a REST API discoverable and accessible. URI guidelines 
 provide a practical translation for identifying APIs by developing a structure.
 
-This document only describes the URI strategy and does not discuss its substantive application. For information on APIs, we refer to the MFFBAS API design guidelines. The use of this naming convention 
+This document only describes the URI strategy and does not discuss its substantive application. For information on APIs, we refer to the Het Normo API design guidelines. The use of this naming convention 
 is limited but leading to use within the CMF. In practice, this applies to all REST APIs that EDSN and other sector organisations build and maintain. Other market roles are advised to follow these guidelines as much as possible.
 
-[^1]: Referred documents can be found in the global [document reference](../references.md).
+[^1]: Referred documents can be found in the global [document reference](../references.html).
 
 ## Coherence of the concepts URI, URN, URL and resource
 

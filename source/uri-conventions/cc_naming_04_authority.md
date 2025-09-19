@@ -157,7 +157,7 @@ Overview of central hubs and portals:
 #### Top domain
 
 When choosing the main domain name of the \<Authority\>, the following options were considered:
-1. The domain name of the API provider; e.g. in the case of MFF-BAS: "mffbas.nl"
+1. The domain name of the API provider; e.g. in the case of Het Normo: "hetnormo.nl"
 2. An organization-specific national domain name for all APIs such as "edsn.nl" or "netbeheernederland.nl"
 3. A new generic domain name to be chosen nationally such as "netbeheer.nl" or
 "nutssector.nl"

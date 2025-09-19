@@ -1,5 +1,5 @@
 ### Mandatory structure of URIs
-The basic structure of the MFF BAS API URIs follows the internet standard RFC3986:
+The basic structure of the Het Normo API URIs follows the internet standard RFC3986:
 
 ```
 <Protocol>://<Authority>/<Path>[?<Query>][#<Fragment>]

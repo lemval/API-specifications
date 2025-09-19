@@ -11,7 +11,7 @@ Open section for explanation, rationale and exception conditions
 </summary>
 
 #### Explanation
-This API strategy has been designated by MFF BAS as a general starting point for designing and developing APIs. Energy sector specific design guidelines are included as additional rules.
+This API strategy has been designated by Het Normo as a general starting point for designing and developing APIs. Energy sector specific design guidelines are included as additional rules.
 
 #### Rationale
 The Dutch government its API strategy is quite well thought out and mature. There is also the possibility that the energy sector will also adhere government APIs.

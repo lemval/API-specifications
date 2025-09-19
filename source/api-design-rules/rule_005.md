@@ -22,7 +22,7 @@ Example:
 ```json
 {
   "type": "https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.3",
-  "title": "Forbidden”
+  "title": "Forbidden"
   "status": 403
 }
 ```

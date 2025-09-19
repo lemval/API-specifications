@@ -27,7 +27,7 @@ info:
     name:
     url:
   version:
-  x-releaseDate
+  x-releaseDate:
 ```
 
 The `version` attribute specifies the version number of the API as included in the URI (URI component \<version\>) according to the rules of semantic versioning.

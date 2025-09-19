@@ -2,39 +2,20 @@
 <html class="js" lang="en" style="overflow: initial;">
 
 <head>
-    <meta charset="UTF-8">
-    <link href='https://fonts.googleapis.com/css?family=Figtree' rel='stylesheet'>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    {% include head-custom.html %}
 
     <title>{{ page.title }} | Het Normo</title>
 </head>
-
 <body>
 
-    <header>
-        <nav id="site-navigation" class="navigation__wrapper --primary">
-            <a href="https://hetnormo.nl">
-                <img src="https://hetnormo.nl/wp-content/uploads/2025/05/scratch_26.svg" /></a>
-        </nav>
-        <ul class="downloads">
-            <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP file</strong></a></li>
-            <li><a href="{{ site.github.tar_url }}">Download <strong>TAR ball</strong></a></li>
-            <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
-        </ul>
-    </header>
+    {% include header.html %}
 
     {% include sidebar.html %}
 
     <main class="doc-content">
-
         {{ content }}
-
     </main>
 
-    <footer>
-        <p class="footer">© Het Normo 2025</p>
-    </footer>
+    {% include footer.html %}
 </body>
-
 </html>

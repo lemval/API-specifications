@@ -21,7 +21,7 @@ API Design Guideline [ID02](../api-design-rules/).
 #### Explanation
 
 This guideline is energy sector specific. The NL GOV profile for CloudEvents does not prescribe 
-this attribute. Note that the major versioning is reflected in the URI address of the queue (see [MFF BAS URI Guidelines](../uri-conventions/)). 
+this attribute. Note that the major versioning is reflected in the URI address of the queue (see [Het Normo URI Guidelines](../uri-conventions/)). 
 
 #### Constraints
 

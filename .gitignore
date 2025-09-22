@@ -17,7 +17,6 @@ _site/
 # Details at https://github.com/github/pages-gem/issues/768
 Gemfile.lock
 *~
-docs/api-design-rules/index.md
 *.swp
-docs/uri-conventions/index.md
-docs/event-data-specs/index.md
+docs/*/index.md
+docs/*/*/index.md

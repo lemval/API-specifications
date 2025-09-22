@@ -29,6 +29,10 @@ present. In NL GOV profile for CloudEvents this is a recommendation.
 
 #### Example
 
-`"specversion" : "1.0"`
+```json
+{
+   "name" : "Data Field"
+}
+```
 
 </details>

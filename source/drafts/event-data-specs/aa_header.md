@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc-draft
 ---
 
 # Event Data Specification
@@ -7,9 +7,9 @@ layout: doc
 | <!-- -->                 | <!-- -->   |
 | :-------------------     | :--------- |
 | __Requested by__         | Het Normo  |
-| __Version__              | 0.9-web    |
-| __Status__               | Concept    |
-| __Publication date__     | 2025-03-06 |
+| __Version__              | 1.1        |
+| __Status__               | Draft    |
+| __Publication date__     | 2025-09-22 |
 {: .header-table }
 
 This document is a publication of Het Normo. In the pursuit of completeness and correctness of data, we kindly request you to submit comments, additions and improvements regarding this document by [raising a ticket]({{ site.github.issues_url }}) in this repository. 

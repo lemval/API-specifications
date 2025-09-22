@@ -20,7 +20,7 @@ to keep the impact of change as small as possible. Sustainable URIs contribute t
 
 #### Examples
 
-An example of a bad URI, used for time administration: `https://pnp-webdisp.bedrijf.local:8190/irj/portal/urenverantwoording`
+An example of a bad URI, used for time administration: `https://pnp-webdisp.bedrijf.local:8190/irj/portal/urenverantwoording`.
 This URI is, in addition to the fact that it is not easy to read and remember, very
 application-specific and shows implementation complexity. As a result, it is not
 stable in the long term. What if we switch to other software, another

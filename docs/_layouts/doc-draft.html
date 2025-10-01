@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html class="js" lang="en" style="overflow: initial;">
+
+<head>
+    {% include head-custom.html %}
+
+    <title>{{ page.title }} | Het Normo</title>
+</head>
+<body class="draftDocument">
+
+    {% include header.html %}
+    {% include draft.html %}
+    {% include sidebar.html %}
+
+    <main class="doc-content">
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+</body>
+</html>

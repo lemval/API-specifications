@@ -14,7 +14,7 @@ Open section for description, explanation, constraints and example
 
 #### Description
 
-The `subject` attribute holds a specific data element for the `type`. Each `type` can have its own content definition. For example, for `mdm.meter.updated` this may be the meter number associated. It still needs to be considered as metadata, not as payload data.
+The `subject` attribute represents a specific data element related to the event `type`. Each event type can define its own interpretation of the subject. For example, in an event of type `mdm.meter.updated` the subject refers to the meter number that was updated. Including the subject in contextual metadata is particularly useful for generic subscription filtering scenarios and for clarifying the event its scope without requiring payload parsing.
 
 #### Explanation
 

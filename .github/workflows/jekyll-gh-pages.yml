@@ -50,6 +50,11 @@ jobs:
         with:
           srcDir: source/drafts/event-data-specs
           destFile: docs/event-data-specs-draft/index.md
+      - name: Concatenate DRAFT API Design Rules
+        uses: nerdoza/action-md-concat@v1
+        with:
+          srcDir: source/drafts/api-design-rules
+          destFile: docs/api-design-rules-draft/index.md
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:

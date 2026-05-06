@@ -14,10 +14,12 @@ Additionally, each operation **should** generate these common error codes:
 
 - **400 – Bad Request**: The request contains syntactic errors that make execution impossible. This also pertains to all types of errors in query- and/or header parameters.
 - **401 – Unauthorized**: The requester must authenticate before calling the operation.
-- **403 – Forbidden**: The requester has no rights to perform the given operation or may not execute it on the specified resource.
+- **403 – Forbidden**: The requester has no rights to perform the given operation or may not execute it on the specified resource. The request failure is tied to insufficient permissions to a resource or action. 
 - **422 – Unprocessable Content**: The request is syntactically correct but the payload contains semantic errors and/or conflicts preventing execution (only applicable for those operations that receive payloads).
 - **500 – Internal Server Error**: The called application encounters a problem that makes it impossible to execute the requested operation.
 - **503 – Service Unavailable**: The called application is currently unavailable.
+
+In order not to disclose the existence of resources that the client has no access to, operations **should** return a **404** error (Not Found) instead of a **403** (Forbidden) on these occasions.
 
 ### Responses to Operations
 
@@ -30,7 +32,7 @@ Both approaches are allowed from a REST ‘best practices’ perspective. Howeve
 
 Additionally, in the case of POST and PUT, the requester already provides most of the resource state in the request, making the response largely redundant. This results in unnecessary overhead, especially in complex data models. Finally, the response from POST, PUT, and PATCH is not inherently cacheable, unlike GET.
 
-Considering the above, only option (2) is permitted: POST, PUT, and PATCH must return *only a status*, and the GET operation **should** be used to retrieve the resource state. In some cases (where the requester immediately requires the new state), this results in the overhead of one additional GET call. However, the advantages outweigh this drawback.
+Considering the above, only option (2) is permitted: POST, PUT, and PATCH **should** return *only a status*, and the GET operation **should** be used to retrieve the resource state. In some cases (where the requester immediately requires the new state), this results in the overhead of one additional GET call. However, the advantages outweigh this drawback.
 
 ------
 
@@ -43,14 +45,14 @@ A GET request with a resource ID is the designated (and only) method for retriev
 The operation **may** result in the following response codes:
 
 - **200 – Success**: The response payload contains only the attributes of the requested resource that the requester has permission to view (see also ID 25). Additionally, the response **may** include an ETag HTTP header with a unique identifier of the resource, which can be used for optimising resource caching and detecting update conflicts. See guideline XXX for details.
-- **404 – Not Found**: The provided ID does not correspond to a valid resource.
+- **404 – Not Found**: The provided ID does not correspond to a valid resource. This error **should** also be returned in case the requester has no permission to access that particular resource.
 - **409 – Conflict**: The resource exists, but its current state prevents retrieval, for example, because it is locked.
 
-A GET request without an explicit resource ID serves as a standard search query. A maximum of *five* query parameters may be specified for filtering. If more parameters are needed, if the search functionality is complex, or if privacy concerns arise, POST should be used instead (see further details). Depending on the number and size of responses, pagination may be implemented to divide the results into manageable blocks. See guideline ID 28 for details.
+A GET request without an explicit resource ID serves as a standard search query. A maximum of *five* query parameters may be specified for filtering. If more parameters are needed, if the search functionality is complex, or if privacy concerns arise, POST **should** be used instead (see further details). Depending on the number and size of responses, pagination **may** be implemented to divide the results into manageable blocks. See guideline [ID 28](https://hetnormo.github.io/API-standards/api-design-rules/#id-28) for details.
 
 The operation **may** result in the following response codes:
 
-- **200 – Success**: The response payload contains a list (with or without pagination) of all resources matching the search filter. Each resource in this list contains only the attributes the requester is authorised to view (see also [ID 25](https://lemval.github.io/API-specifications/api-design-rules/#id-25)). If no results are found, an empty list **should** be returned.
+- **200 – Success**: The response payload contains a list (with or without pagination) of all resources matching the search filter. Each resource in this list contains only the attributes the requester is authorised to view (see also [ID 25](https://https://hetnormo.github.io/API-standards/api-design-rules/#id-25)). If no results are found, an empty list **should** be returned.
   It is permitted to limit the search results to only the information necessary for the requester to determine a subset of results, which can then be fully retrieved using GET (with ID).
 - **409 – Conflict**: The current state of the collection prevents execution of the search query, for example, because it is locked.
 - **422 – Unprocessable Content**: The semantic check in this context may indicate that the request cannot be executed because it would result in an excessively large result set (e.g., querying a large collection without an explicit filter or with unrealistic filter parameters).
@@ -86,7 +88,7 @@ The operation **may** result in the following response codes:
 - **200 - Ok**: The replacement was successful and the response body *as an exception* contains a *status record* providing useful metadata pertaining to the operation. It does **not** return the resource itself.  (see "Exception" below). The response **may** optionally include an **ETag** header containing the (new) ETag key of the modified resource.
 - **202 – Accepted**: The request has been received and successfully validated but has not yet been executed. This can happen in case of asynchronous processing. If the requester wants to ensure that the changes have been applied, they must perform a GET request at a later time to check the state.
 - **204 – No Content**: The replacement was successful, and no response is returned, as the updated resource state can be retrieved via a GET request (see justification under GET). The response **may** optionally include an **ETag** header containing the (new) ETag key of the modified resource.
-- **404 – Not Found**: The provided ID does not correspond to a valid resource.
+- **404 – Not Found**: The provided ID does not correspond to a valid resource. This error **should** also be returned in case the requester has no permission to update that particular resource.
 - **409 – Conflict**: The resource exists, but its current state prevents updates, for example, because it is locked or because a required (parent) resource is missing.
 - **412 - Precondition Failed**: The provided **ETag** value does not match the current state of the resource (stale state).
 
@@ -201,6 +203,7 @@ The operation **may** result in the following response codes:
 - **200 – OK**: The resource(s) have been successfully deleted, and a status overview is available in the response payload. *This is an exception* (see "Exception" below).
 - **202 – Accepted**: The request has been received and successfully validated but has not yet been executed. This can occur in cases of asynchronous processing. If the requester wants to ensure that the resource has indeed been deleted, they must perform a GET request at a later time.
 - **204 – No Content**: The resource(s) have been successfully deleted.
+- **404 - Not Found**: The provided ID does not correspond to a valid resource. This error **should** also be returned in case the requester has no permission to delete that particular resource.
 - **409 – Conflict**: The operation cannot be executed because the current state does not allow it (e.g. because the collection or resource is locked or child resources have to be deleted first).
 - **412 - Precondition Failed**: The provided **ETag** value does not match the current state of the resource (stale state).
 
@@ -248,7 +251,7 @@ The operation **may** result in the following response codes:
 - **200 - Ok**: The update was successful and the response body contains a *status record* providing useful metadata pertaining the operation. *This is an exception* (see "Exception" below). The response **may** optionally include an **ETag** header containing the (new) ETag key of the modified resource.
 - **202 – Accepted**: The request has been received and successfully validated but has not yet been executed. This can happen in cases of asynchronous processing. If the requester wants to ensure that the changes have been applied, a later GET request must be performed to check the state.
 - **204 – No Content**: The update was successful, and no response is returned since it can be retrieved via a GET operation (see justification under GET).
-- **404 – Not Found**: The specified ID does not correspond to a valid resource.
+- **404 – Not Found**: The provided ID does not correspond to a valid resource. This error **should** also be returned in case the requester has no permission to update that particular resource.
 - **409 – Conflict**: The resource exists, but its current state makes it impossible to update, e.g., because it is locked.
 - **412 - Precondition Failed**: The provided **ETag** value does not match the current state of the resource (stale state).
 
@@ -277,7 +280,7 @@ A HEAD operation is always performed on a unique resource (i.e., a URL that dete
 The operation **may** result in the following response codes:
 
 - **204 – No Content**: The standard success response for HEAD, as no response body is returned by definition.
-- **404 – Not Found**: The specified ID does not correspond to a valid resource.
+- **404 – Not Found**: The specified ID does not correspond to a valid resource. This error **should** also be returned in case the requester has no permission to access that particular resource.
 - **501 – Not Implemented**: The server does not support the HEAD operation.
 
 A HEAD operation **should never** contain a response body (except for error messages in failure responses)!
@@ -320,7 +323,7 @@ The server **may** also send other header parameters if they are considered rele
 The operation **may** result in the following response codes:
 
 - **204 – No Content**: The standard success response for OPTIONS, as a response body is typically not returned.
-- **404 – Not Found**: If the URL contains a resource ID and the specified ID does not correspond to a valid resource.
+- **404 – Not Found**: If the URL contains a resource ID and the specified ID does not correspond to a valid resource. This error **should** also be returned in case the requester has no permission to access that particular resource.
 - **501 – Not Implemented**: The server does not support the OPTIONS operation.
 
 An OPTIONS operation **should never** contain a response body (except for error messages in failure responses)!

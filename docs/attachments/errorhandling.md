@@ -13,7 +13,7 @@ HTTP error codes typically have two sources:
 1. The *application* that implements the invoked RESTful API (*explicit* error codes);
 2. The *network components* that exist between the client and the application (*implicit* error codes);
 
-The scope of standardized error reporting is **only** the application that implements the RESTful API (*implicit* codes). Client applications **must** be aware that the second category exists and that they can thus receive HTTP errors from network components that are not explicitly documented in the *Open API Specification* (OAS) schemas. Examples of common implicit codes are 405 (Method not allowed), 428 (Precondition required), 429 (Too many requests), 501 (Not implemented) or 503 (Service unavailable). The format of the response for an implicit error code is **undefined** since it depends on the network component that issued the error. Clients **should** be designed such that they can properly process **any** explicit or implicit HTTP error code.
+The scope of standardized error reporting is **only** the application that implements the RESTful API (*explicit* codes). Client applications **must** be aware that the second category exists and that they can thus receive HTTP errors from network components that are not documented in the *Open API Specification* (OAS) schemas (implicit error codes **could** be documented but this is not mandatory). Examples of common implicit codes are 405 (Method not allowed), 428 (Precondition required), 429 (Too many requests), 501 (Not implemented) or 503 (Service unavailable). The format of the response for an implicit error code is **undefined** since it depends on the network component that issued the error. Clients **should** be designed such that they can properly process **any** explicit or implicit HTTP error code.
 
 ### 405 - Method not allowed
 
@@ -29,7 +29,7 @@ A 429 (Too many requests) error code is typically issued when the client sends m
 
 ### 501 - Not implemented
 
-A 501 (Not implemented) error code means that the server does not support the functionality required to fulfill the request. A response with this status **may** also include a [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Retry-After) header, telling the client that they can retry the request after the specified time has elapsed.
+A 501 (Not implemented) error code means that the server does not support the functionality required to fulfill the request.
 
 A 501 code is the appropriate response when the server does not recognize the request method and is incapable of supporting it for any resource. Servers are required to support [`GET`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/GET) and [`HEAD`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/HEAD), and therefore **must not** return `501` in response to requests with these methods. If the server does recognize the method, but intentionally does not allow it, the appropriate response is a 405 (Method not allowed) error code.
 

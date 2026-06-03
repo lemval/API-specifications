@@ -21,7 +21,7 @@ A 405 (Method not allowed) error code indicates that the server knows the reques
 
 ### 429 - Too many requests
 
-A 429 (Too many requests) error code is typically issued when the client sends more requests per unit of time that the server is willing or able to process. The error code **should** be accompanied by a HTTP [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Retry-After) header which specifies the time (in seconds) that the client should wait until attempting new requests. Depending on the API gateway, other HTTP headers **may** be supplied as well, providing additional information.
+A 429 (Too many requests) error code is typically issued when the client sends more requests per unit of time than the server is willing or able to process. The error code **should** be accompanied by a HTTP [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Retry-After) header which specifies the time (in seconds) that the client should wait until attempting new requests. Depending on the API gateway, other HTTP headers **may** be supplied as well, providing additional information.
 
 ### 501 - Not implemented
 

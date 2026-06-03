@@ -19,10 +19,6 @@ The scope of standardized error reporting is **only** the application that imple
 
 A 405 (Method not allowed) error code indicates that the server knows the request method, but the target resource does not currently support this method. The server **must** generate an [`Allow`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Allow) header in a 405 response with a list of methods that the target resource currently supports.
 
-### 428 - Precondition required
-
-A 428 (Precondition required) error code indicates that the server requires the request to be conditional. Typically, a 428 response means that a required precondition header such as [`If-Match`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/If-Match) is missing. When a precondition header does not match the server-side state, the response **should** be a 412 (Pecondition failed) error code instead.
-
 ### 429 - Too many requests
 
 A 429 (Too many requests) error code is typically issued when the client sends more requests per unit of time that the server is willing or able to process. The error code **should** be accompanied by a HTTP [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Retry-After) header which specifies the time (in seconds) that the client should wait until attempting new requests. Depending on the API gateway, other HTTP headers **may** be supplied as well, providing additional information.

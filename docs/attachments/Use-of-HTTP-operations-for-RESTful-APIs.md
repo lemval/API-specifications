@@ -17,7 +17,32 @@ Additionally, each operation **should** generate these common error codes:
 - **403 – Forbidden**: The requester has no rights to perform the given operation or may not execute it on the specified resource.
 - **422 – Unprocessable Content**: The request is syntactically correct but the payload contains semantic errors and/or conflicts preventing execution (only applicable for those operations that receive payloads).
 - **500 – Internal Server Error**: The called application encounters a problem that makes it impossible to execute the requested operation.
-- **503 – Service Unavailable**: The called application is currently unavailable.
+
+### Conflict handling
+
+Operations that perform state updates on resources **could** be designed such that the client must explicitly specify a resource state precondition. In that case, each update operation **must** include a precondition header such as [`If-Match`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/If-Match) or [`If-Unmodified-Since`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/If-Unmodified-Since) and the server **must** respond with a 428 error code in case the client omits this header (whether or not a conflict actually exists). When the server requires a precondition header to be present, the 428 error code **should** be documented in the OAS specification.
+
+When a conflict actually occurs, the server **should** respond with a 412 error code, indicating that the current state of the resource does not match the provided precondition. In this case, the client **should** perform a GET operation to refresh it's state before attempting another update.
+
+Note that the OAS specification **should** document the 412 error code in case the server is able to provide this code. When the server supports the 428 error code, the 412 code **must** also be specified.
+
+#### 412 - Precondition failed
+
+The precondition given in one or more of the request-header fields evaluated to false when it was tested on the server. This response code allows the client to place preconditions on the current resource metainformation (header field data) and thus prevent the requested method from being applied to a resource other than the one intended. 
+
+The 412 error code can be generated in case any of the preconditions mentioned in the table below are passed to the appropriate HTTP operation (the table only defines those preconditions that might result in a 412 error):
+
+| Header parameter:     | Description:                                                 |
+| --------------------- | ------------------------------------------------------------ |
+| `If-Match`            | The `If-Match` request-header is used with a method to make it conditional. A client that has one or more entities previously obtained from the resource can verify that one of those entities is current by including a list of their associated entity tags (`ETags`) in the `If-Match` header field. As a special case, the value `*` matches any current entity on the resource. <br />If none of the entity tags match, or if `*` is given and no current entity exists, the server **must not** perform the requested method, and **must** return a 412 (Precondition Failed) response. This behavior is most useful when the client wants to prevent an updating method, such as PUT, from modifying a resource that has changed since the client last retrieved it. |
+| `If-None-Match`       | The If-None-Match request-header field is used with a method to make it conditional. A client that has one or more entities previously obtained from the resource can verify that none of those entities is current by including a list of their associated entity tags in the `If-None-Match` header field. The purpose of this feature is to allow efficient updates of cached information with a minimum amount of transaction overhead. It is also used to prevent a method (e.g. PUT) from inadvertently modifying an existing resource when the client believes that the resource does not exist. As a special case, the value `*` matches any current entity on the resource.<br />If any of the entity tags match the entity tag of the entity that would have been returned in the response to a similar GET request (without the `If-None-Match` header) on that resource, or if `*` is given and any current entity exists for that resource, then the server **must not** perform the requested method, unless required to do so because the resource's modification date fails to match that supplied in an `If-Modified-Since` header field in the request.    Instead, if the request method was GET or HEAD, the server **should** respond with a 304 (Not Modified) response, including the cache-related header fields (particularly `ETag`) of one of the entities that matched. For all other request methods, the server **must** respond with a status of 412 (Precondition Failed). |
+| `If-Unmodified-Since` | The `If-Unmodified-Since` request-header field is used with a method to make it conditional. If the requested resource has not been modified since the time specified in this field, the server **should** perform the requested operation as if the **If-Unmodified-Since** header were not present. If the requested variant has been modified since the specified time, the server **must not** perform the requested operation, and **must** return a 412 (Precondition Failed). |
+
+#### 428 - Precondition required
+
+A 428 (Precondition required) error code indicates that the server requires the request to be conditional. Typically, a 428 response means that a required precondition header such as [`If-Match`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/If-Match) is missing. When a precondition header is present but its value does not match the server-side state, the response **should** be a 412 (Pecondition failed) error code instead.
+
+The 428 code is typical use is to avoid the *lost update* problem, where a client GETs a resource's state, modifies it, and PUTs it back to the server when meanwhile a third party has modified the state on the server, leading to a conflict.  By requiring requests to be conditional, the server can assure that clients are working with the correct copies.
 
 ### Responses to Operations
 
@@ -26,11 +51,11 @@ When designing RESTful APIs, two general approaches can be observed for implemen
 1. Mutation operations (POST, PUT, PATCH) return the (new) state of the modified/created resource.
 2. Mutation operations (POST, PUT, PATCH) return only a status.
 
-Both approaches are allowed from a REST ‘best practices’ perspective. However, the downside of option (1) is that it introduces multiple ‘backdoors’ for retrieving a resource. Particularly in large, complex data structures and/or intricate authorisation models, it is not always straightforward to determine exactly what should be returned. Ideally, these algorithms should be implemented in a single location.
+Both approaches are allowed from a REST ‘best practices’ perspective. However, the downside of option (1) is that it introduces multiple ‘backdoors’ for retrieving a resource. Particularly in large, complex data structures and/or intricate authorisation models, it is not always straightforward to determine exactly what should be returned. Ideally, these algorithms **should** be implemented in a single location.
 
 Additionally, in the case of POST and PUT, the requester already provides most of the resource state in the request, making the response largely redundant. This results in unnecessary overhead, especially in complex data models. Finally, the response from POST, PUT, and PATCH is not inherently cacheable, unlike GET.
 
-Considering the above, only option (2) is permitted: POST, PUT, and PATCH must return *only a status*, and the GET operation **should** be used to retrieve the resource state. In some cases (where the requester immediately requires the new state), this results in the overhead of one additional GET call. However, the advantages outweigh this drawback.
+Considering the above, only option (2) is permitted: POST, PUT, and PATCH **must** return *only a status*, and the GET operation **should** be used to retrieve the resource state. In some cases (where the requester immediately requires the new state), this results in the overhead of one additional GET call. However, the advantages outweigh this drawback.
 
 ------
 
@@ -88,7 +113,8 @@ The operation **may** result in the following response codes:
 - **204 – No Content**: The replacement was successful, and no response is returned, as the updated resource state can be retrieved via a GET request (see justification under GET). The response **may** optionally include an **ETag** header containing the (new) ETag key of the modified resource.
 - **404 – Not Found**: The provided ID does not correspond to a valid resource.
 - **409 – Conflict**: The resource exists, but its current state prevents updates, for example, because it is locked or because a required (parent) resource is missing.
-- **412 - Precondition Failed**: The provided **ETag** value does not match the current state of the resource (stale state).
+- **412 - Precondition Failed**: The provided precondition (either `ETag` or last-modified timestamp) does not match the current state of the resource (stale state).
+- **428 - Precondition Required**: The server requires a precondition header (such as `If-Match` or `If-Unmodified-Since`) to be present and the client failed to provide them.
 
 A PUT request must never contain a response body (except for responses related to error messages)!
 
@@ -203,6 +229,7 @@ The operation **may** result in the following response codes:
 - **204 – No Content**: The resource(s) have been successfully deleted.
 - **409 – Conflict**: The operation cannot be executed because the current state does not allow it (e.g. because the collection or resource is locked or child resources have to be deleted first).
 - **412 - Precondition Failed**: The provided **ETag** value does not match the current state of the resource (stale state).
+- **428 - Precondition Required**: The server requires a precondition header (such as `If-Match` or `If-Unmodified-Since`) to be present and the client failed to provide them.
 
 ### Justification
 
@@ -251,6 +278,7 @@ The operation **may** result in the following response codes:
 - **404 – Not Found**: The specified ID does not correspond to a valid resource.
 - **409 – Conflict**: The resource exists, but its current state makes it impossible to update, e.g., because it is locked.
 - **412 - Precondition Failed**: The provided **ETag** value does not match the current state of the resource (stale state).
+- **428 - Precondition Required**: The server requires a precondition header (such as `If-Match` or `If-Unmodified-Since`) to be present and the client failed to provide them.
 
 A PATCH operation **should not** contain a response body (except for error messages that are part of failure responses)!
 

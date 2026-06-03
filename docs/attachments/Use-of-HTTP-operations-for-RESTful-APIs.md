@@ -14,9 +14,11 @@ Additionally, each operation **should** generate these common error codes:
 
 - **400 – Bad Request**: The request contains syntactic errors that make execution impossible. This also pertains to all types of errors in query- and/or header parameters.
 - **401 – Unauthorized**: The requester must authenticate before calling the operation.
-- **403 – Forbidden**: The requester has no rights to perform the given operation or may not execute it on the specified resource.
+- **403 – Forbidden**: The server understands the request (and knows the identity of the client), but otherwise refuses to process the request due to application logic, such as insufficient permissions to a resource or action.
 - **422 – Unprocessable Content**: The request is syntactically correct but the payload contains semantic errors and/or conflicts preventing execution (only applicable for those operations that receive payloads).
 - **500 – Internal Server Error**: The called application encounters a problem that makes it impossible to execute the requested operation.
+
+In order not to disclose the existence of specific resource entities that the client has no access to, operations **should** return a **404** error (Not Found) instead of a **403** (Forbidden) for these specific situations.
 
 ### Conflict handling
 

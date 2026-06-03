@@ -13,10 +13,10 @@ Open section for explanation, rationale and exception conditions
 #### Explanation
 
 Error messages must be specified according to the standardized error message format of RFC-9457 ([RFC 9457 - Problem Details for HTTP APIs](https://datatracker.ietf.org/doc/html/rfc9457)), as prescribed in API-46 in ASNO. The following attributes are mandatory for each error message:
-+ _type_: contains a URI reference to the error type;
-+ _title_: generic title for the error type;
-+ _status_: the original HTTP status code provided by the server;
-The default value 'about:blank' may be used if no URI reference for attribute 'type' can be given.
++ `type`: contains a URI reference to the error type;
+  The default value `about:blank` **may** be used if no URI reference for attribute `type` can be given.
++ `title`: generic title for the error type;
++ `status`: the original HTTP status code provided by the server;
 
 Example:
 ```json

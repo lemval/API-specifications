@@ -32,3 +32,5 @@ The sign offs are sorted by most recent last.
 | 4.9     | Sign off | 11-12-2024 | CoP Secure Architecture |
 | 5.0     | Final    | 22-01-2025 | MFF BAS ALV |
 | 5.1     | Concept  | 01-01-2026 | API werkgroep |
+| 5.2     | Sign off | 04-02-2026 | CoP Secure Architecture |
+| 6.0     | Final    | 06-05-2026 | CoP Secure Architecture |

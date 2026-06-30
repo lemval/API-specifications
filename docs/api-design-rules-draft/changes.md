@@ -11,3 +11,4 @@ The changes are sorted by most recent last.
 | 5.0     | Adopted  | Sign off by MFF BAS ALV on 22 January 2025 |
 | 5.0     | Concept  | Updated attachment 'Use-of-HTTP-operations-for-RESTful-APIs'<br/>Improved layout |
 | 5.2     | For Approval | Review 'MFF BAS CoP Secure Architecture' processed and submitted for approval |
+| 6.0     | Adopted  | Sign off by MFF BAS CoP Secure Architecture on 6 May 2026 |

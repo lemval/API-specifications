@@ -6,9 +6,9 @@ layout: doc-draft
 
 | <!-- -->             | <!-- -->   |
 | :------------------- | :--------- |
-| __Version__              | 5.2    |
-| __Status__               | For Approval    |
-| __Publication date__     | 2026-01-30 |
+| __Version__              | 6.0    |
+| __Status__               | Adopted    |
+| __Publication date__     | 2026-05-06 |
 {: .header-table }
 
 This document is a publication of Het Normo. In the pursuit of completeness and correctness of data, we kindly request you to submit comments, additions and improvements regarding this document by [raising a ticket]({{ site.github.issues_url }}) in this repository. 

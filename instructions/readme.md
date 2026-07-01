@@ -26,7 +26,7 @@ For drafts,
 - Create a feature branch,
 - Make changes (also in version info) and create a pull request.
 
-Move/copy the files to the original folder upon publication and optionally update the sidebar file in `_includes`.
+Move/copy the files to the original folder upon publication and optionally update the sidebar file in `_includes`. **Be sure** to change the `layout:` tag back to `layout: doc`.
 
 ### Updating
 

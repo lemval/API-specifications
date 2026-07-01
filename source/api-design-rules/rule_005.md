@@ -49,6 +49,3 @@ None.
 
 </details>
 
-
-05 - Errors and exceptions
-

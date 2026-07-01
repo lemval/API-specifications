@@ -1,7 +1,5 @@
-### ID 09
+### ID 09 - Complex search
 
-| Title    | __09 - Complex search__ |
-| :----    | :---------- |
 | Strategy | Use POST for extended or complex searches. |
 
 <details><summary>

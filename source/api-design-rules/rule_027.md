@@ -1,7 +1,5 @@
-### ID 27
+### ID 27 - Use simple search to retrieve a resource via a foreign key
 
-| Title    | __27 - Use simple search to retrieve a resource via a foreign key__ |
-| :------- | :----------------------------------------------------------- |
 | Strategy | If a resource has to be retrieved using a foreign key (i.e. a key that is not the primary key of the resource), use GET on the *resource collection* and provide the key as a query parameter. |
 
 

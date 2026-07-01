@@ -1,7 +1,5 @@
-### ID 17
+### ID 17 - HAL for the use of hypermedia controls
 
-| Title    | __17 - HAL for the use of hypermedia controls__ |
-| :----    | :---------- |
 | Strategy | Hypertext Application Language (HAL) is used to realize hypermedia controls. |
 
 <details><summary>

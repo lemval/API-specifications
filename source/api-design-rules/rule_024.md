@@ -1,7 +1,5 @@
-### ID 24
+### ID 24 - Use of xxxOf constructs
 
-| Title    | __24 - Use of xxxOf constructs__ |
-| :----    | :---------- |
 | Strategy | The use of xxxOf (allOf, anyOf, oneOf) constructs in APIs should be avoided. |
 
 <details><summary>

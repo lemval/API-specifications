@@ -1,7 +1,5 @@
-### ID 01
+### ID 01 - Interface definition language
 
-| Title    | __01 - Interface definition language__ |
-| :----    | :---------- |
 | Strategy | Definition of the interface (the API) is done in UK English. |
 
 <details><summary>

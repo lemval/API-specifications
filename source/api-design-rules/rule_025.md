@@ -1,7 +1,5 @@
-### ID 25
+### ID 25 - Conditional access
 
-| Title    | __25 - Conditional access__ |
-| :----    | :---------- |
 | Strategy | 1/ Choose a practical taxonomy based on the RESTful API scope;<br/>2/ Split the resources exposed by the RESTful API into separate value objects as much as possible. Make the value object optional if not all consumers are entitled to it;<br/>3/ Make attributes of a resource that are not part of a value object and that, depending on roles and relevance for consumers, are or are not visible, **optional**. |
 
 <details><summary>

@@ -1,7 +1,5 @@
-### ID 22
+### ID 22 - Use of regular personal data in the URL of REST APIs
 
-| Title    | __22 - Use of regular personal data in the URL of REST APIs__ |
-| :----    | :---------- |
 | Strategy | Regular personal data may be used in the URL of a REST API. |
 
 <details><summary>

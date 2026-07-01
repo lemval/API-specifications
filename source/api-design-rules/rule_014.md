@@ -1,7 +1,5 @@
-### ID 14
+### ID 14 - Defining a string
 
-| Title    | __14 - Defining a string__ |
-| :----    | :---------- |
 | Strategy | The definition of a string type must be provided with length attributes. |
 
 <details><summary>

@@ -1,7 +1,5 @@
-### ID 03
+### ID 03 - Query parameter for sorting
 
-| Title    | __03 - Query parameter for sorting__ |
-| :----    | :---------- |
 | Strategy | Use '_sort' or 'sort' for sorting of the result set. |
 
 <details><summary>

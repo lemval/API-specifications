@@ -1,7 +1,5 @@
-### ID 05
+### ID 05 - Errors and exceptions
 
-| Title    | __05 - Errors and exceptions__ |
-| :----    | :---------- |
 | Strategy | APIs must handle errors and exceptions uniformly and according to standards. |
 
 <details><summary>

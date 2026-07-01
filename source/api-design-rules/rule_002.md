@@ -1,7 +1,5 @@
-### ID 02
+### ID 02 - Version management
 
-| Title    | __02 - Version management__ |
-| :----    | :---------- |
 | Strategy | APIs are always provided with a version. |
 
 <details><summary>

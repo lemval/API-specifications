@@ -1,7 +1,5 @@
-### ID STD-01
+### ID STD-01 - API strategy for the Dutch government
 
-|Title| __STD-01 - API strategy for the Dutch government__ |
-|:----|:----------|
 |Strategy| When designing and developing APIs, the API strategy for the Dutch government (ASNO) is guiding.|
 
 <details><summary>

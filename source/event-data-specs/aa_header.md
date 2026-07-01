@@ -1,5 +1,5 @@
 ---
-layout: doc-draft
+layout: doc
 ---
 
 # Event Data Specification

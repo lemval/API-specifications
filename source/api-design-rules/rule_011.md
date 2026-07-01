@@ -1,7 +1,5 @@
-### ID 11
+### ID 11 - Use of JSON Schema Specification
 
-| Title    | __11 - Use of JSON Schema Specification__ |
-| :----    | :---------- |
 | Strategy | Every API call with a body must be provided with a JSON Schema Specification. |
 
 <details><summary>

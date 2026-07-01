@@ -1,7 +1,5 @@
-### ID 23
+### ID 23 - API specification
 
-| Title    | __23 - API specification__ |
-| :----    | :---------- |
 | Strategy | APIs are to be specified as [OAS v3](https://spec.openapis.org/#openapi-specification) and rendered in either JSON or YAML. |
 
 

@@ -1,7 +1,5 @@
-### ID 06
+### ID 06 - No use of ODATA
 
-| Title    | __06 - Use of ODATA__ |
-| :----    | :---------- |
 | Strategy | APIs should be specified in OAS. |
 
 <details><summary>

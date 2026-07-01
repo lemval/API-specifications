@@ -1,7 +1,5 @@
-### ID 20
+### ID 20 - HTTP headers
 
-| Title    | __20 - HTTP headers__ |
-| :----    | :---------- |
 | Strategy | HTTP headers are used for security and adding metadata to the request and response. |
 
 <details><summary>

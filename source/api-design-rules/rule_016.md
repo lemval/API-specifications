@@ -1,7 +1,5 @@
-### ID 16
+### ID 16 - Defining field names
 
-| Title    | __16 - Defining field names__ |
-| :----    | :---------- |
 | Strategy | Use the definition of field names as prescribed in the reference model. |
 
 <details><summary>

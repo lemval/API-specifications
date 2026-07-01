@@ -1,7 +1,5 @@
-### ID 04
+### ID 04 - Query parameter for searching
 
-| Title    | __04 - Query parameter for searching__ |
-| :----    | :---------- |
 | Strategy | Use '_search' or 'search' for full text searches. |
 
 <details><summary>

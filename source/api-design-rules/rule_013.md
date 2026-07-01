@@ -1,7 +1,5 @@
-### ID 13
+### ID 13 - Defining date, time and date-time
 
-| Title    | __13 - Defining date, time and date-time__ |
-| :----    | :---------- |
 | Strategy | The date and time notation must be complete and unambiguous. |
 
 <details><summary>

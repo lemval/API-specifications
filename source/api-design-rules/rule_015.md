@@ -1,7 +1,5 @@
-### ID 15
+### ID 15 - Authorization
 
-| Title    | __15 - Authorization__ |
-| :----    | :---------- |
 | Strategy | Authorization on APIs should be set up with OAuth2.0 and preferably with OpenID Connect. |
 
 <details><summary>

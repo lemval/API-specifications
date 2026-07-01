@@ -1,7 +1,5 @@
-### ID 26
+### ID 26 - Use encoded cursor paging
 
-| Title    | __26 - Use encoded cursor paging__ |
-| :----    | :---------- |
 | Strategy | If an operation uses pagination, this is implemented using an encoded cursor pagination algorithm. |
 
 <details><summary>

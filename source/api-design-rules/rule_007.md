@@ -1,7 +1,5 @@
-### ID 07
+### ID 07 - Definition of attributes Info object
 
-| Title    | __07 - Definition of attributes Info object__ |
-| :----    | :---------- |
 | Strategy |  Every API (from OpenAPI 3.0 and higher) must be provided with an Info object with information about the API. |
 
 <details><summary>

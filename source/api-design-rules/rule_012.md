@@ -1,7 +1,5 @@
-### ID 12
+### ID 12 - Quality of Service specification
 
-| Title    | __12 - Quality of Service specification__ |
-| :----    | :---------- |
 | Strategy | Each API has a Quality of Service specification (QoS). |
 
 <details><summary>

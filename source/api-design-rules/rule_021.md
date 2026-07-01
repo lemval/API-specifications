@@ -1,7 +1,5 @@
-### ID 21
+### ID 21 - Enumerations
 
-| Title    | __21 - Enumerations__                                 |
-| :------- | :---------------------------------------------------- |
 | Strategy | Enumerations are conditionally allowed for REST APIs. |
 
 <details><summary>

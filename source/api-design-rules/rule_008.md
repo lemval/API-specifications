@@ -1,7 +1,5 @@
-### ID 08
+### ID 08 - Use of REST operations
 
-| Title    | __08 - Use of REST operations__ |
-| :----    | :---------- |
 | Strategy | REST operations are used conform conventions below. |
 
 1. The **GET** operation in combination **with a resource ID** serves as the only method to _retrieve a given resource_.

@@ -1,7 +1,5 @@
-### ID 10
+### ID 10 - HTTP status codes
 
-| Title    | __10 - HTTP status codes__ |
-| :----    | :---------- |
 | Strategy | Define the minimum set of HTTP status codes in your API specification. |
 
 <details><summary>

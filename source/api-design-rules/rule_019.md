@@ -1,7 +1,5 @@
-### ID 19
+### ID 19 - Custom representation
 
-| Title    | __19 -  Custom representation__ |
-| :----    | :---------- |
 | Strategy | For targeted searches for individual fields ('custom representation'), the '_fields' parameter is used. |
 
 <details><summary>

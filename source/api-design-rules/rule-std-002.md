@@ -1,7 +1,5 @@
-### ID STD-02
+### ID STD-02 - Standardized information models for defining the API
 
-|Title| __STD-02 - Standardized information models for defining the API__ |
-|:----|:----------|
 |Strategy| For the definition of the interface (the API), the standardized information models such as IEC CIM, ebIX UML Model and ebIX EFET ENTSO-E Role Model are leading for naming resources and attributes.|
 
 <details><summary>

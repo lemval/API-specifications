@@ -1,7 +1,5 @@
-### ID 18
+### ID 18 - Expanding linked resources
 
-| Title    | __18 - Expanding linked resources__ |
-| :----    | :---------- |
 | Strategy | The query parameter '_expand' is used to expand linked resources. |
 
 <details><summary>

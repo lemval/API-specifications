@@ -6,13 +6,13 @@ With these guidelines, the API Strategy Working Group aims to establish a set of
 **[API Design Rules](api-design-rules/)** - Guidelines for creating clear, consistent, and developer-friendly APIs  
 **[Event Data Specification](event-data-specs/)** - Specification of Event Metadata  
 
-<!--
 ## For approval
 <span class="draftPopup">Note: this is a draft!</span>
-**[Event Data Specification](event-data-specs-draft/)** - Specification of Event Metadata
+**[API Design Rules](api-design-rules-draft/)** - Search endpoint.
 {: .draft }
+<!--
 <span class="draftPopup">Note: this is a draft!</span>
-**[API Design Rules](api-design-rules-draft/)** - Update of appendix *HTTP operation usage*.
+**[Event Data Specification](event-data-specs-draft/)** - Specification of Event Metadata
 {: .draft }
 -->
 

@@ -6,11 +6,12 @@
 2. The **GET** operation **without a resource ID** serves as a _search_.
 3. The **PUT** operation serves only to _replace_ an existing resource with a new version.
 4. The **POST** operation, if assigned to a collection, serves to _create_ a new resource within that collection.
-5. The **POST** operation, if assigned to a 'search' endpoint under a collection, serves as an implementation of a _complex search_ function (see also [ID 09](#id-09)).
+5. The **POST** operation, if assigned to a 'search' endpoint under a collection, serves as an implementation of a _complex search_ function (see also **QUERY** and [ID 09](#id-09---complex-search)).
 6. The **DELETE** operation serves only to _delete_ an existing resource (or resources).
 7. The **PATCH** operation serves only to perform a _partial update_ of a resource.
 8. The **HEAD** operation serves to retrieve HTTP headers for a corresponding GET operation, without returning the GET response payload.
 9. The **OPTIONS** operation provides metadata about a given endpoint such as the available operations, content types and security requirements.
+10. The **QUERY** operation can optionally be used as future alternative for search operations (#2 and #5).
 
 <details><summary>
 

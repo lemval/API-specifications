@@ -10,7 +10,7 @@ Open section for explanation, rationale and exception conditions
 
 #### Explanation
 
-This is conform ASNO API-32. To prevent confusion or conflicts with resource parameters the underscore variant is favoured.
+This is conform ASNO API-32 [\[2\]](../references.html). To prevent confusion or conflicts with resource parameters the underscore variant is favoured.
 
 #### Rationale
 
@@ -18,6 +18,6 @@ Using a standardised parameter for searching (full text searches) increases comp
 
 #### Exceptions
 
-Complex searches should make use of a request payload.
+Complex searches should make use of a request payload; see rule [ID 9](#id-09---complex-search).
 
 </details>

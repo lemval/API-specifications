@@ -15,7 +15,7 @@ Define the minimum set of HTTP status codes that must be specified and supported
 |REST operation     | 200 | 201 | 204 | 404 | 422 |
 | -------------     | :-: | :-: | :-: | :-: | :-: |
 |GET (search)       |  √  |     |     |  √  |  √  |
-|GET )single object)|  √  |     |     |  √  |     |
+|GET (single object)|  √  |     |     |  √  |     |
 |PUT                |     |     | opt |  √  |  √  |
 |PATCH              |     |     | opt |  √  |  √  |
 |DELETE             | opt |     |  √  |  √  |     |

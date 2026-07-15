@@ -11,7 +11,6 @@
 7. The **PATCH** operation serves only to perform a _partial update_ of a resource.
 8. The **HEAD** operation serves to retrieve HTTP headers for a corresponding GET operation, without returning the GET response payload.
 9. The **OPTIONS** operation provides metadata about a given endpoint such as the available operations, content types and security requirements.
-10. The **QUERY** operation can optionally be used as future alternative for search operations (#2 and #5).
 
 <details><summary>
 

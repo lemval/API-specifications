@@ -28,7 +28,7 @@ Define the minimum set of HTTP status codes that must be specified and supported
 + The following **mandatory** codes can be seen as generic status codes and are therefore applicable to all REST operations: 401, 403, 500;
 + The following **optional** codes can be seen as generic status codes and are therefore applicable to all REST operations: 202, 400, 429, 301, 302, 501, 503;
 
-Opt indicates that the error code can optionally be used in special cases:
+`opt` indicates that the error code can optionally be used in special cases:
 + A 204 status code can be returned for an update (PUT or PATCH) of a resource since these do not (always) return a response payload;
 + A 202 status code can be returned if it concerns an asynchronous handling (PUT, POST, PATCH or DELETE);
 + A 200 status code must be returned for a DELETE operation if there is a need for a response payload with information about the deleted resource.

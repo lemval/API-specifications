@@ -4,7 +4,7 @@
 
 A core principle of RESTful APIs is the use of standard HTTP operations: GET, PUT, POST, PATCH and DELETE (and to a lesser extent, HEAD and OPTIONS). The CONNECT and TRACE operations are rarely, if ever, used within RESTful APIs and are therefore not considered here.
 
-This appendix provides guidelines for using POST as a complex search operation (POST …//search). An Internet Draft now exists for implementing a new HTTP operation, QUERY. It is expected that, over time, this will replace POST as the method for complex searches. However, since the specification is still under development and there is currently no support for this new operation within existing RESTful API specifications, it will be disregarded for now.
+This appendix provides guidelines for using POST as a complex search operation (POST …/search). An Internet Draft now exists for implementing a new HTTP operation, QUERY. It is expected that, over time, this will replace POST as the method for complex searches. However, since the specification is still under development and there is currently no support for this new operation within existing RESTful API specifications, it will be disregarded for now.
 
 The HTTP standard allows for a considerable amount of flexibility in the functionality and use of operations. Since the sector aims for consistent behaviour across RESTful APIs, it is necessary to further refine how these operations are used. This appendix provides additional guidelines and serves as further clarification of guideline 08.
 

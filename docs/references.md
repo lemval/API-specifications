@@ -15,4 +15,4 @@
 | 11 | [Project Notificatieservices](https://github.com/VNG-Realisatie/notificatieservices/) | 30-06-2022 | 1.0 | VNG Realisatie | 
 | 12 | [NL GOV profile for CloudEvents](https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/) | 30-05-2024 | Draft | Logius |
 
-The API Strategy of the Dutch Government (known as ASNO) as mentioned under [2], can be found on the site: [**Kennisplatform API's**](https://developer.overheid.nl/communities/kennisplatform-apis). See also [**GeoNovum API Strategie**](https://www.geonovum.nl/geo-standaarden/api-strategie).
+The API Strategy of the Dutch Government (known as ASNO) as mentioned under [2], can be found on the site: [**Kennisplatform API's**](https://developer.overheid.nl/communities/kennisplatform-apis) or [**KP-APIs**](https://geonovum.github.io/KP-APIs/). See also [**GeoNovum API Strategie**](https://www.geonovum.nl/geo-standaarden/api-strategie).

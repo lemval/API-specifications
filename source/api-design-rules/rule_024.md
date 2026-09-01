@@ -1,4 +1,4 @@
-### ID 24
+### ID 24 - Use of xxxOf constructs
 
 | Title    | __24 - Use of xxxOf constructs__ |
 | :----    | :---------- |

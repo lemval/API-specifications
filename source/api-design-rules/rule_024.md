@@ -2,7 +2,7 @@
 
 | Title    | __24 - Use of xxxOf constructs__ |
 | :----    | :---------- |
-| Strategy | The use of xxxOf (`allOf`, `anyOf`, oneOf) constructs in APIs should be used with caution. |
+| Strategy | The use of xxxOf (`allOf`, `anyOf`, `oneOf`) constructs in APIs should be used with caution. |
 
 <details><summary>
 
@@ -14,7 +14,7 @@ Open section for explanation, rationale and exception conditions
 
 Although the `allOf`, `anyOf` and `oneOf` constructs are valid OAS3 constructs, they might cause problems when used in combination with older code frameworks. This rule does not forbid the use of these constructs, but merely advises to proceed with caution. 
 
-When `anyOf` or `oneOf` are used in a schema, that schema **should** also specify an [OAS Discriminator](https://swagger.io/docs/specification/v3_0/data-models/inheritance-and-polymorphism/) construct to facilitate proper selection between schema variants at run-time.
+When `anyOf` or `oneOf` are used in a schema, that schema **should** specify an [OAS Discriminator](https://swagger.io/docs/specification/v3_0/data-models/inheritance-and-polymorphism/) construct to facilitate proper selection between schema variants at run-time.
 
 #### Rationale
 
